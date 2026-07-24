@@ -2,20 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #0c1a13;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #1e4e35;
+    color: #fff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-content px-5 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold
+      transition-all duration-200 focus:outline-none focus-visible:ring-4
+      focus-visible:ring-gold-300/60 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-lg {
+    @apply px-7 py-3.5 text-base;
+  }
+
+  .btn-md {
+    @apply px-5 py-2.5 text-sm;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold-500 text-ink shadow-card hover:bg-gold-400 hover:shadow-lift active:translate-y-px;
+  }
+
+  .btn-pine {
+    @apply btn bg-pine-700 text-white shadow-card hover:bg-pine-600 hover:shadow-lift active:translate-y-px;
+  }
+
+  .btn-white {
+    @apply btn bg-white text-pine-800 shadow-card hover:bg-pine-50 active:translate-y-px;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-pine-700 bg-transparent text-pine-800 hover:bg-pine-700 hover:text-white;
+  }
+
+  .btn-ghost-light {
+    @apply btn border border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-pine-600;
+  }
+
+  .card {
+    @apply rounded-2xl border border-pine-100 bg-white shadow-card;
+  }
+
+  .prose-lake {
+    @apply text-ink-soft leading-relaxed;
+  }
+
+  .prose-lake p {
+    @apply mb-4;
+  }
+
+  .prose-lake h2 {
+    @apply mb-4 mt-10 font-display text-2xl font-bold text-ink sm:text-3xl;
+  }
+
+  .prose-lake h3 {
+    @apply mb-3 mt-8 text-xl font-bold text-ink;
+  }
+
+  .prose-lake ul {
+    @apply mb-5 space-y-2;
+  }
+
+  .prose-lake ul li {
+    @apply relative pl-7;
+  }
+
+  .prose-lake ul li::before {
+    content: "";
+    @apply absolute left-0 top-2 h-3.5 w-3.5 rounded-full bg-gold-400;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
