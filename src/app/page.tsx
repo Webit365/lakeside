@@ -132,13 +132,17 @@ export default function HomePage() {
               Watertown &amp; Northern NY · Since {site.foundedYear}
             </div>
             <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl lg:text-[3.4rem]">
-              Commercial Landscaping &amp; Snow Plowing in{" "}
+              Year-Round Property Care in{" "}
               <span className="text-gold-400">Watertown, NY</span>
             </h1>
+            <p className="mt-4 font-display text-xl font-bold text-gold-400 sm:text-2xl">
+              Your Property. Our Priority. Every Season.
+            </p>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-pine-100">
-              The trusted local company for businesses and homeowners who want
-              their property handled right — year-round grounds care in summer,
-              dependable snow &amp; ice management all winter. Fully insured,
+              The trusted choice for residential and commercial property care in
+              Watertown, NY. From landscaping, lawn care, and grounds maintenance
+              to dependable snow plowing and ice management, we keep your property
+              looking its best and operating safely year-round. Fully insured,
               digitally dispatched, and fast to respond.
             </p>
 
