@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Bricolage_Grotesque } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+// GA4 Measurement ID (public — exposed client-side by design).
+const GA_MEASUREMENT_ID = "G-7K45BWTGDQ";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
@@ -74,6 +78,20 @@ export default function RootLayout({
         </main>
         <Footer />
         <MobileCtaBar />
+
+        {/* Google Analytics (GA4) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
