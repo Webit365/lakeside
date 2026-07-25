@@ -34,7 +34,9 @@ export function pageMeta({
   twitterTitle?: string;
   twitterDescription?: string;
 }): Metadata {
-  const url = path === "/" ? `${baseUrl}/` : `${baseUrl}${path}`;
+  // Next normalizes the root canonical to no trailing slash (trailingSlash:false),
+  // so keep canonical/OG/sitemap all consistent on the no-slash form.
+  const url = `${baseUrl}${path === "/" ? "" : path}`;
   const ogImages = images ? images.map((src) => ({ url: src })) : [defaultOgImage];
   const twitterImages = images ?? [defaultOgImage.url];
   return {
