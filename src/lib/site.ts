@@ -7,8 +7,9 @@ export const site = {
   shortBrand: "Lakeside NNY",
   tagline: "Commercial & Residential Landscaping and Snow Management",
   foundedYear: 2010,
-  // Update to the live domain before launch (used for canonical URLs + schema).
-  url: "https://lakesidenny.com",
+  // Primary live domain (www). Non-www 308-redirects here, so canonicals,
+  // OG, sitemap, robots, and schema all use www to match the served host.
+  url: "https://www.lakesidenny.com",
   phone: {
     display: "(315) 777-1809",
     href: "tel:+13157771809",
