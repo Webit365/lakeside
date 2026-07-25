@@ -8,6 +8,7 @@ const GA_MEASUREMENT_ID = "G-7K45BWTGDQ";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
+import { CtaTracking } from "@/components/CtaTracking";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusinessSchema, baseUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -78,6 +79,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <MobileCtaBar />
+        <CtaTracking />
 
         {/* Google Analytics (GA4) */}
         <Script
