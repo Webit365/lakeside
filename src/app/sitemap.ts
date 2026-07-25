@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [...staticPaths, ...servicePaths].map((p) => ({
-    url: `${baseUrl}${p.path === "/" ? "" : p.path}`,
+    url: `${baseUrl}${p.path === "/" ? "/" : p.path}`,
     lastModified: now,
     changeFrequency: p.freq,
     priority: p.priority,

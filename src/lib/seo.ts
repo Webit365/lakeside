@@ -34,7 +34,7 @@ export function pageMeta({
   twitterTitle?: string;
   twitterDescription?: string;
 }): Metadata {
-  const url = `${baseUrl}${path === "/" ? "" : path}`;
+  const url = path === "/" ? `${baseUrl}/` : `${baseUrl}${path}`;
   const ogImages = images ? images.map((src) => ({ url: src })) : [defaultOgImage];
   const twitterImages = images ?? [defaultOgImage.url];
   return {
