@@ -98,7 +98,7 @@ export function CtaBand({
           <p className="mt-3 text-pine-100">{subtitle}</p>
         </div>
         <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
-          <Link href="/contact" className="btn-gold btn-lg">
+          <Link href="/contact" className="btn-primary btn-lg">
             Request My Quote
             <ArrowRightIcon className="h-5 w-5" />
           </Link>

@@ -249,7 +249,7 @@ export function QuoteForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="btn-gold btn-lg mt-6 w-full"
+        className="btn-primary btn-lg mt-6 w-full"
       >
         {status === "submitting" ? "Sending…" : mode === "commercial" ? "Request My Commercial Bid" : "Get My Free Quote"}
       </button>

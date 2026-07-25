@@ -14,7 +14,7 @@ import {
 } from "@/components/icons";
 import { SectionHeading, CtaBand, Reviews } from "@/components/sections";
 import { FaqSection } from "@/components/Faq";
-import { PhotoSlot } from "@/components/Media";
+import { Photo } from "@/components/Photo";
 import { PhoneLink } from "@/components/PhoneLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -138,7 +138,7 @@ export default function CommercialPage() {
                 season, documented and dependable.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link href="/contact?type=commercial" className="btn-gold btn-lg">
+                <Link href="/contact?type=commercial" className="btn-primary btn-lg">
                   Request a Commercial Bid
                   <ArrowRightIcon className="h-5 w-5" />
                 </Link>
@@ -162,8 +162,20 @@ export default function CommercialPage() {
               </ul>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <PhotoSlot theme="commercial" className="aspect-[3/4]" icon={<BuildingIcon />} label="Commercial grounds" />
-              <PhotoSlot theme="winter" className="mt-8 aspect-[3/4]" icon={<SnowIcon />} label="Lot clearing" />
+              <Photo
+                src="/photos/commercial-lawn.jpg"
+                alt="Commercial grounds maintained by Lakeside in Watertown NY"
+                className="aspect-[3/4]"
+                sizes="(max-width: 1024px) 45vw, 24vw"
+                priority
+              />
+              <Photo
+                src="/photos/commercial-plowing-lot.jpg"
+                alt="Lakeside clearing a commercial parking lot in Northern NY"
+                className="mt-8 aspect-[3/4]"
+                sizes="(max-width: 1024px) 45vw, 24vw"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -314,7 +326,7 @@ export default function CommercialPage() {
             </p>
           </div>
           <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
-            <Link href="/contact?type=commercial" className="btn-gold btn-lg">
+            <Link href="/contact?type=commercial" className="btn-primary btn-lg">
               Request a Bid
               <ArrowRightIcon className="h-5 w-5" />
             </Link>

@@ -10,7 +10,7 @@ import {
   Reviews,
 } from "@/components/sections";
 import { FaqSection } from "@/components/Faq";
-import { PhotoSlot } from "@/components/Media";
+import { Photo } from "@/components/Photo";
 import { PhoneLink } from "@/components/PhoneLink";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta, breadcrumbSchema, faqSchema } from "@/lib/seo";
@@ -143,7 +143,7 @@ export default function HomePage() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="btn-gold btn-lg">
+              <Link href="/contact" className="btn-primary btn-lg">
                 Get My Free Quote
                 <ArrowRightIcon className="h-5 w-5" />
               </Link>
@@ -174,17 +174,19 @@ export default function HomePage() {
           {/* Hero visual — winter/summer split with floating stat */}
           <div className="relative animate-fade-up [animation-delay:120ms]">
             <div className="grid grid-cols-2 gap-4">
-              <PhotoSlot
-                theme="summer"
+              <Photo
+                src="/photos/commercial-lawn.jpg"
+                alt="Freshly striped commercial lawn maintained by Lakeside in Watertown NY"
                 className="aspect-[3/4]"
-                label="Summer grounds care"
-                icon={<LeafIcon />}
+                sizes="(max-width: 1024px) 45vw, 24vw"
+                priority
               />
-              <PhotoSlot
-                theme="winter"
+              <Photo
+                src="/photos/commercial-plowing-night.jpg"
+                alt="Lakeside plow truck clearing a commercial lot at night in Northern NY"
                 className="mt-8 aspect-[3/4]"
-                label="Winter snow & ice"
-                icon={<SnowIcon />}
+                sizes="(max-width: 1024px) 45vw, 24vw"
+                priority
               />
             </div>
             <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-2xl border border-pine-100 bg-white px-5 py-3.5 shadow-lift">
@@ -262,7 +264,7 @@ export default function HomePage() {
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href="/commercial-landscaping-watertown-ny"
-                    className="btn-gold btn-md"
+                    className="btn-primary btn-md"
                   >
                     Explore Commercial Services
                     <ArrowRightIcon className="h-4 w-4" />
@@ -417,29 +419,29 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <PhotoSlot
-              theme="summer"
+            <Photo
+              src="/photos/commercial-lawn.jpg"
+              alt="Striped commercial lawn maintained by Lakeside"
               className="aspect-square"
-              icon={<LeafIcon />}
-              label="Grounds care"
+              sizes="(max-width: 1024px) 45vw, 24vw"
             />
-            <PhotoSlot
-              theme="commercial"
+            <Photo
+              src="/photos/commercial-plowing-lot.jpg"
+              alt="Lakeside plow truck servicing a commercial parking lot"
               className="mt-6 aspect-square"
-              icon={<BuildingIcon />}
-              label="Commercial"
+              sizes="(max-width: 1024px) 45vw, 24vw"
             />
-            <PhotoSlot
-              theme="winter"
+            <Photo
+              src="/photos/commercial-plowing-night.jpg"
+              alt="Snow and ice management at a Watertown commercial property"
               className="aspect-square"
-              icon={<SnowIcon />}
-              label="Snow & ice"
+              sizes="(max-width: 1024px) 45vw, 24vw"
             />
-            <PhotoSlot
-              theme="neutral"
+            <Photo
+              src="/photos/fleet-lineup.jpg"
+              alt="Lakeside's fleet of digitally dispatched plow trucks"
               className="mt-6 aspect-square"
-              icon={<TruckIcon />}
-              label="Dispatched fleet"
+              sizes="(max-width: 1024px) 45vw, 24vw"
             />
           </div>
         </div>
@@ -559,11 +561,11 @@ export default function HomePage() {
               <ArrowRightIcon className="h-4 w-4" />
             </Link>
           </div>
-          <PhotoSlot
-            theme="commercial"
+          <Photo
+            src="/photos/fleet-plows.jpg"
+            alt="Lakeside plow trucks ready to serve Watertown, Fort Drum, and the Thousand Islands"
             className="aspect-[4/3] w-full"
-            icon={<MapPinIcon />}
-            label="Watertown · Fort Drum · Thousand Islands"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
       </section>

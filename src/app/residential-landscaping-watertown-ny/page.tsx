@@ -12,7 +12,7 @@ import {
 } from "@/components/icons";
 import { SectionHeading, CtaBand, Reviews } from "@/components/sections";
 import { FaqSection } from "@/components/Faq";
-import { PhotoSlot } from "@/components/Media";
+import { Photo } from "@/components/Photo";
 import { PhoneLink } from "@/components/PhoneLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -102,7 +102,7 @@ export default function ResidentialPage() {
                 property with care.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link href="/contact" className="btn-gold btn-lg">
+                <Link href="/contact" className="btn-primary btn-lg">
                   Get My Free Quote
                   <ArrowRightIcon className="h-5 w-5" />
                 </Link>
@@ -113,11 +113,12 @@ export default function ResidentialPage() {
                 />
               </div>
             </div>
-            <PhotoSlot
-              theme="summer"
+            <Photo
+              src="/photos/residential-beds.jpg"
+              alt="Freshly mulched beds and manicured landscaping at a Northern NY home"
               className="aspect-[4/3] w-full"
-              icon={<LeafIcon />}
-              label="Beautiful, well-kept properties"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
             />
           </div>
         </div>

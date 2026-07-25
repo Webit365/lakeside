@@ -9,32 +9,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand — evergreen for landscaping, ice-blue for winter services
+        // Brand — matched to the Lakeside logo: grass green #52B74A + azure blue #1281C4
         pine: {
-          50: "#f0f7f2",
-          100: "#dcecdf",
-          200: "#bbd9c3",
-          300: "#8fbd9d",
-          400: "#5c9a72",
-          500: "#3a7d54",
-          600: "#276241",
-          700: "#1e4e35",
-          800: "#193f2c",
-          900: "#153426",
-          950: "#0a1d15",
+          50: "#f1faef",
+          100: "#ddf2d9",
+          200: "#bde7b5",
+          300: "#8fd685",
+          400: "#63c257",
+          500: "#52b74a", // brand green
+          600: "#3f9a3a",
+          700: "#347a31",
+          800: "#2c602b",
+          900: "#264f26",
+          950: "#0f2a12",
         },
         frost: {
-          50: "#eff8ff",
-          100: "#dbeefe",
-          200: "#bfe1fe",
-          300: "#93cdfd",
-          400: "#60affa",
-          500: "#3b8ef6",
-          600: "#256feb",
-          700: "#1d59d8",
-          800: "#1e49af",
-          900: "#1e408a",
-          950: "#172a54",
+          50: "#eef8ff",
+          100: "#d9efff",
+          200: "#bae3ff",
+          300: "#88d0ff",
+          400: "#4fb4fb",
+          500: "#2698ec",
+          600: "#1281c4", // brand blue
+          700: "#12669d",
+          800: "#155681",
+          900: "#17486b",
+          950: "#0f2c46",
         },
         gold: {
           50: "#fffbeb",

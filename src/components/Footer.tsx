@@ -22,7 +22,7 @@ export function Footer() {
             </p>
           </div>
           <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
-            <Link href="/contact" className="btn-gold btn-lg">
+            <Link href="/contact" className="btn-primary btn-lg">
               Get My Free Quote
             </Link>
             <a href={site.phone.href} className="btn-ghost-light btn-lg">

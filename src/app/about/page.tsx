@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { SectionHeading, CtaBand, Reviews } from "@/components/sections";
-import { PhotoSlot } from "@/components/Media";
+import { Photo } from "@/components/Photo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneLink } from "@/components/PhoneLink";
 import { JsonLd } from "@/components/JsonLd";
@@ -10,7 +10,6 @@ import {
   ShieldIcon,
   MapPinIcon,
   ClockIcon,
-  TruckIcon,
   LeafIcon,
   ArrowRightIcon,
 } from "@/components/icons";
@@ -106,8 +105,18 @@ export default function AboutPage() {
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <PhotoSlot theme="summer" className="aspect-[3/4]" icon={<LeafIcon />} label="Since 2010" />
-            <PhotoSlot theme="winter" className="mt-8 aspect-[3/4]" icon={<TruckIcon />} label="Digitally dispatched" />
+            <Photo
+              src="/photos/fleet-lineup.jpg"
+              alt="Lakeside Outdoor Services truck fleet, serving Watertown since 2010"
+              className="aspect-[3/4]"
+              sizes="(max-width: 1024px) 45vw, 24vw"
+            />
+            <Photo
+              src="/photos/fleet-plows.jpg"
+              alt="Lakeside's digitally dispatched plow trucks lined up and ready"
+              className="mt-8 aspect-[3/4]"
+              sizes="(max-width: 1024px) 45vw, 24vw"
+            />
           </div>
         </div>
       </section>
@@ -132,7 +141,7 @@ export default function AboutPage() {
             ))}
           </div>
           <div className="mt-10 flex justify-center">
-            <Link href="/contact" className="btn-gold btn-lg">
+            <Link href="/contact" className="btn-primary btn-lg">
               Work with a company you can count on
               <ArrowRightIcon className="h-5 w-5" />
             </Link>

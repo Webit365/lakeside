@@ -57,7 +57,7 @@ export function Header() {
         }`}
       >
         <div className="container-x flex h-16 items-center justify-between gap-4 lg:h-[4.75rem]">
-          <Logo />
+          <Logo priority />
 
           {/* Desktop nav */}
           <nav
@@ -119,7 +119,7 @@ export function Header() {
           {/* Desktop CTAs */}
           <div className="hidden items-center gap-2.5 lg:flex">
             <PhoneLink className="btn-outline btn-md" iconClassName="h-4 w-4" />
-            <Link href="/contact" className="btn-gold btn-md">
+            <Link href="/contact" className="btn-primary btn-md">
               Free Quote
               <ArrowRightIcon className="h-4 w-4" />
             </Link>
@@ -228,7 +228,7 @@ export function Header() {
             ))}
 
             <div className="mt-5 flex flex-col gap-3">
-              <Link href="/contact" className="btn-gold btn-lg w-full">
+              <Link href="/contact" className="btn-primary btn-lg w-full">
                 Get My Free Quote
                 <ArrowRightIcon className="h-5 w-5" />
               </Link>

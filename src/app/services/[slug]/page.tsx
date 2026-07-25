@@ -13,7 +13,7 @@ import {
 } from "@/components/icons";
 import { SectionHeading, CtaBand } from "@/components/sections";
 import { FaqSection } from "@/components/Faq";
-import { PhotoSlot } from "@/components/Media";
+import { Photo } from "@/components/Photo";
 import { PhoneLink } from "@/components/PhoneLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -43,8 +43,45 @@ export async function generateMetadata({
   });
 }
 
-const themeForSeason = (season: string) =>
-  season === "winter" ? "winter" : season === "year-round" ? "commercial" : "summer";
+// Real photo per service (public/photos). Falls back to the fleet lineup.
+const photoForSlug: Record<string, { src: string; alt: string }> = {
+  "commercial-snow-plowing": {
+    src: "/photos/commercial-plowing-lot.jpg",
+    alt: "Lakeside plow truck clearing a commercial parking lot in Watertown NY",
+  },
+  "snow-plowing": {
+    src: "/photos/commercial-plowing-night.jpg",
+    alt: "Lakeside snow plowing a lot at night in Northern New York",
+  },
+  "snow-removal": {
+    src: "/photos/commercial-plaza-snow.jpg",
+    alt: "Snow removal at a commercial plaza during a Northern NY storm",
+  },
+  "salting-de-icing": {
+    src: "/photos/commercial-plowing-night.jpg",
+    alt: "Commercial lot treated for snow and ice by Lakeside in Watertown NY",
+  },
+  "lawn-mowing-maintenance": {
+    src: "/photos/commercial-lawn.jpg",
+    alt: "Freshly striped commercial lawn mowed by Lakeside in Watertown NY",
+  },
+  "landscape-design-installation": {
+    src: "/photos/residential-beds.jpg",
+    alt: "Fresh mulch beds and landscaping at a Northern NY home",
+  },
+  "property-maintenance": {
+    src: "/photos/commercial-lawn.jpg",
+    alt: "Well-maintained commercial grounds cared for year-round by Lakeside",
+  },
+  "spring-fall-cleanups": {
+    src: "/photos/residential-beds.jpg",
+    alt: "Tidy, cleaned-up landscape beds at a Watertown NY property",
+  },
+  "topsoil-gravel-grading": {
+    src: "/photos/residential-beds.jpg",
+    alt: "Graded beds and fresh groundwork by Lakeside Outdoor Services",
+  },
+};
 
 export default async function ServicePage({
   params,
@@ -56,10 +93,6 @@ export default async function ServicePage({
   if (!service) notFound();
 
   const Icon = serviceIcons[slug as keyof typeof serviceIcons];
-  const theme = themeForSeason(service.season) as
-    | "summer"
-    | "winter"
-    | "commercial";
 
   const related = service.related
     .map((r) => services.find((s) => s.slug === r))
@@ -116,7 +149,7 @@ export default async function ServicePage({
                 {service.heroSubhead}
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Link href="/contact" className="btn-gold btn-lg">
+                <Link href="/contact" className="btn-primary btn-lg">
                   Get My Free Quote
                   <ArrowRightIcon className="h-5 w-5" />
                 </Link>
@@ -127,11 +160,14 @@ export default async function ServicePage({
                 />
               </div>
             </div>
-            <PhotoSlot
-              theme={theme}
+            <Photo
+              src={(photoForSlug[slug] ?? { src: "/photos/fleet-lineup.jpg" }).src}
+              alt={
+                (photoForSlug[slug] ?? { alt: `${service.navLabel} by Lakeside Outdoor Services` }).alt
+              }
               className="aspect-[4/3] w-full"
-              icon={Icon ? <Icon /> : undefined}
-              label={service.navLabel}
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
             />
           </div>
         </div>
@@ -205,7 +241,7 @@ export default async function ServicePage({
             </p>
           </div>
           <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
-            <Link href="/contact" className="btn-gold btn-lg">
+            <Link href="/contact" className="btn-primary btn-lg">
               Request My Quote
             </Link>
             <a href={site.phone.href} className="btn-outline btn-lg">

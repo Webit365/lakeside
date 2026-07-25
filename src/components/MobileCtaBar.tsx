@@ -10,7 +10,7 @@ export function MobileCtaBar() {
         <PhoneIcon className="h-5 w-5" />
         Call Now
       </a>
-      <Link href="/contact" className="btn-gold btn-md">
+      <Link href="/contact" className="btn-primary btn-md">
         Free Quote
       </Link>
     </div>

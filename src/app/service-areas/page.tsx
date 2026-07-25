@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { site, serviceAreas } from "@/lib/site";
 import { SectionHeading, CtaBand, TrustBar } from "@/components/sections";
-import { PhotoSlot } from "@/components/Media";
+import { Photo } from "@/components/Photo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta, breadcrumbSchema } from "@/lib/seo";
@@ -74,11 +74,11 @@ export default function ServiceAreasPage() {
               <ArrowRightIcon className="h-5 w-5" />
             </Link>
           </div>
-          <PhotoSlot
-            theme="commercial"
+          <Photo
+            src="/photos/fleet-plows.jpg"
+            alt={`Lakeside plow trucks serving ${site.address.city}, Fort Drum, and the Thousand Islands`}
             className="aspect-square w-full"
-            icon={<MapPinIcon />}
-            label={`${site.address.city} · Fort Drum · Thousand Islands`}
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
       </section>

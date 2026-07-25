@@ -56,8 +56,8 @@
     @apply px-5 py-2.5 text-sm;
   }
 
-  .btn-gold {
-    @apply btn bg-gold-500 text-ink shadow-card hover:bg-gold-400 hover:shadow-lift active:translate-y-px;
+  .btn-primary {
+    @apply btn bg-frost-600 text-white shadow-card hover:bg-frost-700 hover:shadow-lift active:translate-y-px;
   }
 
   .btn-pine {
