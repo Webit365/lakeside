@@ -154,7 +154,15 @@ export default function HomePage() {
               <PhoneLink
                 className="btn-primary btn-lg"
                 iconClassName="h-5 w-5"
-                label={`Call or Text ${site.phone.contactName} · ${site.phone.display}`}
+                label={
+                  <>
+                    Call or Text {site.phone.contactName}
+                    <span className="lg:hidden">
+                      {" · "}
+                      {site.phone.display}
+                    </span>
+                  </>
+                }
               />
             </div>
 

@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import { site } from "@/lib/site";
 import { PhoneIcon } from "./icons";
 
 type Props = {
   className?: string;
   iconClassName?: string;
-  label?: string;
+  label?: ReactNode;
   showLabel?: boolean;
 };
 
