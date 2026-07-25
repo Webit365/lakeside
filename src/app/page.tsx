@@ -420,8 +420,8 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Photo
-              src="/photos/commercial-lawn.jpg"
-              alt="Striped commercial lawn maintained by Lakeside"
+              src="/photos/residential-lawn.jpg"
+              alt="Freshly striped residential lawn maintained by Lakeside in Watertown NY"
               className="aspect-square"
               sizes="(max-width: 1024px) 45vw, 24vw"
             />
@@ -432,8 +432,8 @@ export default function HomePage() {
               sizes="(max-width: 1024px) 45vw, 24vw"
             />
             <Photo
-              src="/photos/commercial-plowing-night.jpg"
-              alt="Snow and ice management at a Watertown commercial property"
+              src="/photos/commercial-plaza-snow.jpg"
+              alt="Snow and ice management at a Watertown commercial plaza"
               className="aspect-square"
               sizes="(max-width: 1024px) 45vw, 24vw"
             />
@@ -562,8 +562,8 @@ export default function HomePage() {
             </Link>
           </div>
           <Photo
-            src="/photos/fleet-plows.jpg"
-            alt="Lakeside plow trucks ready to serve Watertown, Fort Drum, and the Thousand Islands"
+            src="/photos/salter-truck.jpg"
+            alt="Lakeside Outdoor Services truck with salt spreader serving Watertown, Fort Drum, and the Thousand Islands"
             className="aspect-[4/3] w-full"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />

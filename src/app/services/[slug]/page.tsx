@@ -50,20 +50,20 @@ const photoForSlug: Record<string, { src: string; alt: string }> = {
     alt: "Lakeside plow truck clearing a commercial parking lot in Watertown NY",
   },
   "snow-plowing": {
-    src: "/photos/commercial-plowing-night.jpg",
-    alt: "Lakeside snow plowing a lot at night in Northern New York",
+    src: "/photos/residential-plowing.jpg",
+    alt: "Lakeside Outdoor Services truck plowing a residential driveway in Watertown NY",
   },
   "snow-removal": {
-    src: "/photos/commercial-plaza-snow.jpg",
-    alt: "Snow removal at a commercial plaza during a Northern NY storm",
+    src: "/photos/snow-plowing-bobcat.jpg",
+    alt: "Lakeside truck and Bobcat skid steer hauling out snow after a Northern NY storm",
   },
   "salting-de-icing": {
-    src: "/photos/commercial-plowing-night.jpg",
-    alt: "Commercial lot treated for snow and ice by Lakeside in Watertown NY",
+    src: "/photos/salter-truck.jpg",
+    alt: "Lakeside Outdoor Services truck with salt spreader treating a commercial lot for ice in Watertown NY",
   },
   "lawn-mowing-maintenance": {
-    src: "/photos/commercial-lawn.jpg",
-    alt: "Freshly striped commercial lawn mowed by Lakeside in Watertown NY",
+    src: "/photos/residential-lawn.jpg",
+    alt: "Freshly striped residential lawn mowed by Lakeside in Watertown NY",
   },
   "landscape-design-installation": {
     src: "/photos/residential-beds.jpg",
@@ -74,12 +74,12 @@ const photoForSlug: Record<string, { src: string; alt: string }> = {
     alt: "Well-maintained commercial grounds cared for year-round by Lakeside",
   },
   "spring-fall-cleanups": {
-    src: "/photos/residential-beds.jpg",
-    alt: "Tidy, cleaned-up landscape beds at a Watertown NY property",
+    src: "/photos/spring-cleanup.jpg",
+    alt: "Lakeside crew member raking leaves and debris during a spring cleanup at a Watertown NY home",
   },
   "topsoil-gravel-grading": {
-    src: "/photos/residential-beds.jpg",
-    alt: "Graded beds and fresh groundwork by Lakeside Outdoor Services",
+    src: "/photos/mulching.jpg",
+    alt: "Fresh mulch beds and groundwork by Lakeside Outdoor Services in Northern NY",
   },
 };
 

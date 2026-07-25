@@ -106,18 +106,36 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Photo
-              src="/photos/fleet-lineup.jpg"
-              alt="Lakeside Outdoor Services truck fleet, serving Watertown since 2010"
+              src="/photos/residential-lawn.jpg"
+              alt="A freshly striped residential lawn cared for by Lakeside in Watertown NY"
               className="aspect-[3/4]"
               sizes="(max-width: 1024px) 45vw, 24vw"
             />
             <Photo
-              src="/photos/fleet-plows.jpg"
-              alt="Lakeside's digitally dispatched plow trucks lined up and ready"
+              src="/photos/fleet-lineup.jpg"
+              alt="Lakeside Outdoor Services plow truck fleet, serving Watertown since 2010"
               className="mt-8 aspect-[3/4]"
               sizes="(max-width: 1024px) 45vw, 24vw"
             />
           </div>
+        </div>
+      </section>
+
+      <section className="pb-4 sm:pb-6">
+        <div className="container-x">
+          <figure className="mx-auto max-w-4xl">
+            <Photo
+              src="/photos/crew-team.jpg"
+              alt="The Lakeside Outdoor Services crew in Watertown, New York"
+              className="aspect-[3/2] w-full"
+              rounded="rounded-3xl"
+              sizes="(max-width: 1024px) 100vw, 900px"
+            />
+            <figcaption className="mt-3 text-center text-sm text-ink-muted">
+              The Lakeside crew — the people who show up for your property, every
+              season.
+            </figcaption>
+          </figure>
         </div>
       </section>
 

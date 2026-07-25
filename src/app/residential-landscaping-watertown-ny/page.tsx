@@ -113,13 +113,22 @@ export default function ResidentialPage() {
                 />
               </div>
             </div>
-            <Photo
-              src="/photos/residential-beds.jpg"
-              alt="Freshly mulched beds and manicured landscaping at a Northern NY home"
-              className="aspect-[4/3] w-full"
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              priority
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <Photo
+                src="/photos/residential-beds.jpg"
+                alt="Freshly mulched beds and manicured landscaping at a Northern NY home"
+                className="aspect-[3/4]"
+                sizes="(max-width: 1024px) 45vw, 24vw"
+                priority
+              />
+              <Photo
+                src="/photos/residential-lawn.jpg"
+                alt="A freshly striped residential lawn mowed by Lakeside in Watertown NY"
+                className="mt-8 aspect-[3/4]"
+                sizes="(max-width: 1024px) 45vw, 24vw"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>

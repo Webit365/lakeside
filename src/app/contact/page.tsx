@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { site, serviceAreas } from "@/lib/site";
 import { QuoteForm } from "@/components/QuoteForm";
+import { Photo } from "@/components/Photo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta, breadcrumbSchema } from "@/lib/seo";
@@ -127,6 +128,14 @@ export default function ContactPage() {
                 ))}
               </div>
             </div>
+
+            <Photo
+              src="/photos/crew-truck.jpg"
+              alt="The Lakeside Outdoor Services team ready to help in Watertown NY"
+              className="mt-6 aspect-[16/9] w-full"
+              rounded="rounded-2xl"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
           </div>
 
           {/* Form */}
