@@ -85,7 +85,7 @@ export function QuoteForm() {
         </p>
         <a href={site.phone.href} className="btn-pine btn-lg mx-auto mt-6">
           <PhoneIcon className="h-5 w-5" />
-          Call {site.phone.display}
+          Call or Text {site.phone.display}
         </a>
       </div>
     );

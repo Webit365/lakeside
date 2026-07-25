@@ -45,7 +45,7 @@ export default function ContactPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-frost-100">
             Commercial or residential — tell us about your property and we&apos;ll
-            get you an honest quote fast. Prefer to talk? Call {site.phone.contactName}{" "}
+            get you an honest quote fast. Prefer to talk? Call or Text {site.phone.contactName}{" "}
             directly.
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
               </span>
               <span>
                 <span className="block text-sm text-frost-200">
-                  Call {site.phone.contactName} now
+                  Call or Text {site.phone.contactName} now
                 </span>
                 <span className="block font-display text-2xl font-bold">
                   {site.phone.display}

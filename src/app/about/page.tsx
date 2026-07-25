@@ -101,7 +101,7 @@ export default function AboutPage() {
             <PhoneLink
               className="btn-pine btn-lg not-prose mt-2"
               iconClassName="h-5 w-5"
-              label={`Call ${site.phone.contactName} · ${site.phone.display}`}
+              label={`Call or Text ${site.phone.contactName} · ${site.phone.display}`}
             />
           </div>
           <div className="grid grid-cols-2 gap-4">

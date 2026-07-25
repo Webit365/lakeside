@@ -156,7 +156,7 @@ export default async function ServicePage({
                 <PhoneLink
                   className="btn-ghost-light btn-lg"
                   iconClassName="h-5 w-5"
-                  label={`Call ${site.phone.display}`}
+                  label={`Call or Text ${site.phone.display}`}
                 />
               </div>
             </div>

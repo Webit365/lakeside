@@ -19,7 +19,7 @@ export function PhoneLink({
     <a
       href={site.phone.href}
       className={className}
-      aria-label={`Call ${site.legalName} at ${site.phone.display}`}
+      aria-label={`Call or text ${site.legalName} at ${site.phone.display}`}
       data-cta="call"
     >
       <PhoneIcon className={iconClassName} />

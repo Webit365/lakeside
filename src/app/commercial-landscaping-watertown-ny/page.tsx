@@ -145,7 +145,7 @@ export default function CommercialPage() {
                 <PhoneLink
                   className="btn-ghost-light btn-lg"
                   iconClassName="h-5 w-5"
-                  label={`Call ${site.phone.contactName} · ${site.phone.display}`}
+                  label={`Call or Text ${site.phone.contactName} · ${site.phone.display}`}
                 />
               </div>
               <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-frost-100">

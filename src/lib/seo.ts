@@ -66,7 +66,7 @@ export function localBusinessSchema() {
     foundingDate: String(site.foundedYear),
     priceRange: "$$",
     image: `${baseUrl}/opengraph-image`,
-    logo: `${baseUrl}/icon.svg`,
+    logo: `${baseUrl}/icon.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,

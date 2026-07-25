@@ -55,7 +55,7 @@ const homeFaqs = [
   },
   {
     q: "How do I get a quote?",
-    a: "Call Dave directly at (315) 777-1809 or request a free, no-obligation estimate through our online form. We'll learn about your property and get you an honest quote quickly.",
+    a: "Call or text Dave directly at (315) 777-1809 or request a free, no-obligation estimate through our online form. We'll learn about your property and get you an honest quote quickly.",
   },
 ];
 
@@ -128,7 +128,7 @@ export default function HomePage() {
         <div className="container-x relative grid gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
           <div className="animate-fade-up">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur">
-              <span className="flex h-2 w-2 rounded-full bg-gold-400" />
+              <span className="flex h-2 w-2 rounded-full bg-pine-500" />
               Watertown &amp; Northern NY · Since {site.foundedYear}
             </div>
             <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl lg:text-[3.4rem]">
@@ -147,14 +147,14 @@ export default function HomePage() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="btn-primary btn-lg">
+              <Link href="/contact" className="btn-ghost-light btn-lg">
                 Get My Free Quote
                 <ArrowRightIcon className="h-5 w-5" />
               </Link>
               <PhoneLink
-                className="btn-ghost-light btn-lg"
+                className="btn-primary btn-lg"
                 iconClassName="h-5 w-5"
-                label={`Call ${site.phone.contactName} · ${site.phone.display}`}
+                label={`Call or Text ${site.phone.contactName} · ${site.phone.display}`}
               />
             </div>
 
@@ -493,7 +493,7 @@ export default function HomePage() {
               {
                 step: "1",
                 title: "Request your estimate",
-                body: "Call Dave or fill out the quick form. Tell us about your property and what you need.",
+                body: "Call or text Dave or fill out the quick form. Tell us about your property and what you need.",
               },
               {
                 step: "2",
@@ -524,7 +524,7 @@ export default function HomePage() {
             <PhoneLink
               className="btn-pine btn-lg"
               iconClassName="h-5 w-5"
-              label={`Call ${site.phone.contactName} Now · ${site.phone.display}`}
+              label={`Call or Text ${site.phone.contactName} Now · ${site.phone.display}`}
             />
           </div>
         </div>

@@ -237,7 +237,7 @@ export function Header() {
                 className="btn-pine btn-lg w-full"
               >
                 <PhoneIcon className="h-5 w-5" />
-                Call {site.phone.contactName} · {site.phone.display}
+                Call or Text {site.phone.contactName} · {site.phone.display}
               </a>
             </div>
           </nav>
