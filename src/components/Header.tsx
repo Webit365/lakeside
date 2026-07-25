@@ -36,14 +36,14 @@ export function Header() {
   return (
     <>
       {/* Top utility bar */}
-      <div className="hidden bg-pine-900 text-pine-100 md:block">
+      <div className="hidden bg-frost-900 text-frost-100 md:block">
         <div className="container-x flex h-9 items-center justify-between text-xs">
           <p className="font-medium">
             Serving Watertown, Fort Drum &amp; Northern New York since{" "}
             {site.foundedYear}
           </p>
           <div className="flex items-center gap-5">
-            <span className="text-pine-200/80">{site.hours.display}</span>
+            <span className="text-frost-200/80">{site.hours.display}</span>
             <PhoneLink className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-gold-300" />
           </div>
         </div>

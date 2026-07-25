@@ -76,11 +76,11 @@ export default function ResidentialPage() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-pine-950">
+      <section className="relative overflow-hidden bg-frost-950">
         <div
           aria-hidden="true"
           className="absolute inset-0"
-          style={{ background: "linear-gradient(120deg, #0a1d15 0%, #1e4e35 100%)" }}
+          style={{ background: "linear-gradient(120deg, #081a2b 0%, #155681 100%)" }}
         />
         <div className="container-x relative py-14 lg:py-20">
           <Breadcrumbs
@@ -95,7 +95,7 @@ export default function ResidentialPage() {
               <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.06] text-white sm:text-5xl">
                 Residential Landscaping &amp; Lawn Care in Watertown, NY
               </h1>
-              <p className="mt-5 max-w-xl text-lg text-pine-100">
+              <p className="mt-5 max-w-xl text-lg text-frost-100">
                 For homeowners who want it done right — not just done. Reliable
                 mowing with a detailed finish, custom landscaping, and
                 dependable driveway plowing from a local crew that treats your
@@ -176,7 +176,7 @@ export default function ResidentialPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-pine-50/50 py-16 sm:py-20">
+      <section className="bg-frost-50/50 py-16 sm:py-20">
         <div className="container-x">
           <SectionHeading eyebrow="What we do" title="Residential services" />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -123,15 +123,15 @@ export default async function ServicePage({
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-pine-950">
+      <section className="relative overflow-hidden bg-frost-950">
         <div
           aria-hidden="true"
           className="absolute inset-0"
           style={{
             background:
               service.season === "winter"
-                ? "linear-gradient(120deg, #0a1d15 0%, #172a54 100%)"
-                : "linear-gradient(120deg, #0a1d15 0%, #1e4e35 100%)",
+                ? "linear-gradient(120deg, #081a2b 0%, #172a54 100%)"
+                : "linear-gradient(120deg, #081a2b 0%, #155681 100%)",
           }}
         />
         <div className="container-x relative py-12 lg:py-16">
@@ -145,7 +145,7 @@ export default async function ServicePage({
               <h1 className="mt-5 font-display text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-[2.9rem]">
                 {service.h1}
               </h1>
-              <p className="mt-4 max-w-xl text-lg text-pine-100">
+              <p className="mt-4 max-w-xl text-lg text-frost-100">
                 {service.heroSubhead}
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -208,7 +208,7 @@ export default async function ServicePage({
       </section>
 
       {/* CONTENT BLOCKS */}
-      <section className="bg-pine-50/50 py-14 sm:py-20">
+      <section className="bg-frost-50/50 py-14 sm:py-20">
         <div className="container-x max-w-4xl">
           {service.blocks.map((block) => (
             <div key={block.h2} className="prose-lake mb-10 max-w-none last:mb-0">
@@ -259,7 +259,7 @@ export default async function ServicePage({
 
       {/* RELATED */}
       {related.length > 0 && (
-        <section className="bg-pine-50/50 py-14">
+        <section className="bg-frost-50/50 py-14">
           <div className="container-x">
             <SectionHeading eyebrow="Related services" title="You may also need" />
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

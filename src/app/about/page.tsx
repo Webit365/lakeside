@@ -55,18 +55,18 @@ export default function AboutPage() {
         ])}
       />
 
-      <section className="relative overflow-hidden bg-pine-950">
+      <section className="relative overflow-hidden bg-frost-950">
         <div
           aria-hidden="true"
           className="absolute inset-0"
-          style={{ background: "linear-gradient(120deg, #0a1d15, #1e4e35)" }}
+          style={{ background: "linear-gradient(120deg, #081a2b, #155681)" }}
         />
         <div className="container-x relative py-14 lg:py-20">
           <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "About" }]} light />
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold text-white sm:text-5xl">
             Trusted in Watertown since {site.foundedYear}
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-pine-100">
+          <p className="mt-4 max-w-2xl text-lg text-frost-100">
             Locally owned, professionally run, and built on a simple idea: do
             great work, show up when you say you will, and treat every property
             like it matters.
@@ -139,7 +139,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-pine-50/50 py-16 sm:py-20">
+      <section className="bg-frost-50/50 py-16 sm:py-20">
         <div className="container-x">
           <SectionHeading
             align="center"

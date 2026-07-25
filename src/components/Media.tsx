@@ -9,10 +9,10 @@
 type Theme = "summer" | "winter" | "commercial" | "neutral";
 
 const themes: Record<Theme, { from: string; to: string; accent: string }> = {
-  summer: { from: "#1e4e35", to: "#3a7d54", accent: "#8fbd9d" },
+  summer: { from: "#155681", to: "#3a7d54", accent: "#8fbd9d" },
   winter: { from: "#172a54", to: "#1d59d8", accent: "#93cdfd" },
-  commercial: { from: "#153426", to: "#1e408a", accent: "#f9bd24" },
-  neutral: { from: "#193f2c", to: "#276241", accent: "#bbd9c3" },
+  commercial: { from: "#103a5f", to: "#1e408a", accent: "#f9bd24" },
+  neutral: { from: "#193f2c", to: "#17486b", accent: "#bbd9c3" },
 };
 
 export function PhotoSlot({

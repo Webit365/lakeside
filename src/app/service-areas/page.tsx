@@ -25,18 +25,18 @@ export default function ServiceAreasPage() {
         ])}
       />
 
-      <section className="relative overflow-hidden bg-pine-950">
+      <section className="relative overflow-hidden bg-frost-950">
         <div
           aria-hidden="true"
           className="absolute inset-0"
-          style={{ background: "linear-gradient(120deg, #0a1d15, #1e4e35)" }}
+          style={{ background: "linear-gradient(120deg, #081a2b, #155681)" }}
         />
         <div className="container-x relative py-14 lg:py-20">
           <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Service Areas" }]} light />
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold text-white sm:text-5xl">
             Serving Watertown &amp; the North Country
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-pine-100">
+          <p className="mt-4 max-w-2xl text-lg text-frost-100">
             We keep a concentrated service area around Watertown and Fort Drum on
             purpose — it&apos;s how we respond fast and reliably to every property
             on our route, storm after storm.

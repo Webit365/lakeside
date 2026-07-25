@@ -32,18 +32,18 @@ export default function ContactPage() {
         ])}
       />
 
-      <section className="relative overflow-hidden bg-pine-950">
+      <section className="relative overflow-hidden bg-frost-950">
         <div
           aria-hidden="true"
           className="absolute inset-0"
-          style={{ background: "linear-gradient(120deg, #0a1d15 0%, #153426 50%, #172a54 100%)" }}
+          style={{ background: "linear-gradient(120deg, #081a2b 0%, #103a5f 50%, #172a54 100%)" }}
         />
         <div className="container-x relative py-12 lg:py-16">
           <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Contact" }]} light />
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold text-white sm:text-5xl">
             Get your free, no-obligation quote
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-pine-100">
+          <p className="mt-4 max-w-2xl text-lg text-frost-100">
             Commercial or residential — tell us about your property and we&apos;ll
             get you an honest quote fast. Prefer to talk? Call {site.phone.contactName}{" "}
             directly.
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 <PhoneIcon className="h-7 w-7" />
               </span>
               <span>
-                <span className="block text-sm text-pine-200">
+                <span className="block text-sm text-frost-200">
                   Call {site.phone.contactName} now
                 </span>
                 <span className="block font-display text-2xl font-bold">
@@ -112,7 +112,7 @@ export default function ContactPage() {
               </li>
             </ul>
 
-            <div className="mt-6 rounded-2xl border border-pine-100 bg-pine-50/50 p-5">
+            <div className="mt-6 rounded-2xl border border-pine-100 bg-frost-50/50 p-5">
               <h2 className="text-sm font-bold uppercase tracking-wide text-pine-700">
                 Serving
               </h2>

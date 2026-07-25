@@ -108,13 +108,13 @@ export default function HomePage() {
       />
 
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-pine-950">
+      <section className="relative overflow-hidden bg-frost-950">
         <div
           aria-hidden="true"
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(115deg, #0a1d15 0%, #153426 45%, #172a54 100%)",
+              "linear-gradient(115deg, #081a2b 0%, #103a5f 45%, #172a54 100%)",
           }}
         />
         <div
@@ -138,7 +138,7 @@ export default function HomePage() {
             <p className="mt-4 font-display text-xl font-bold text-gold-400 sm:text-2xl">
               Your Property. Our Priority. Every Season.
             </p>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-pine-100">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-frost-100">
               The trusted choice for residential and commercial property care in
               Watertown, NY. From landscaping, lawn care, and grounds maintenance
               to dependable snow plowing and ice management, we keep your property
@@ -158,7 +158,7 @@ export default function HomePage() {
               />
             </div>
 
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-pine-100">
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-frost-100">
               {[
                 "Free, no-obligation estimates",
                 "Commercial & residential",
@@ -219,7 +219,7 @@ export default function HomePage() {
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {/* Commercial — emphasized */}
-            <div className="group relative overflow-hidden rounded-2xl bg-pine-900 p-8 text-white shadow-lift sm:p-10">
+            <div className="group relative overflow-hidden rounded-2xl bg-frost-900 p-8 text-white shadow-lift sm:p-10">
               <div
                 aria-hidden="true"
                 className="absolute -right-16 -top-16 h-56 w-56 rounded-full opacity-20 blur-2xl"
@@ -235,7 +235,7 @@ export default function HomePage() {
                 <h3 className="mt-5 font-display text-2xl font-bold sm:text-3xl">
                   Commercial Landscaping &amp; Snow Management
                 </h3>
-                <p className="mt-3 text-pine-100">
+                <p className="mt-3 text-frost-100">
                   Retail plazas, offices, medical, industrial, restaurants, and
                   property-management portfolios. Cleared before you open,
                   maintained to protect your image, documented to protect your
@@ -323,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== SERVICES GRID ===== */}
-      <section className="bg-pine-50/50 py-16 sm:py-20">
+      <section className="bg-frost-50/50 py-16 sm:py-20">
         <div className="container-x">
           <SectionHeading
             eyebrow="What we do"
@@ -377,7 +377,7 @@ export default function HomePage() {
               intro="Stop juggling contractors. We keep your property sharp in summer and safe in winter — with a single point of contact and no gaps in coverage."
             />
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-pine-100 bg-pine-50/50 p-5">
+              <div className="rounded-2xl border border-pine-100 bg-frost-50/50 p-5">
                 <div className="flex items-center gap-2 font-bold text-pine-800">
                   <LeafIcon className="h-5 w-5" />
                   Spring – Fall
@@ -444,7 +444,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== WHY US ===== */}
-      <section className="bg-pine-950 py-16 text-white sm:py-20">
+      <section className="bg-frost-950 py-16 text-white sm:py-20">
         <div className="container-x">
           <SectionHeading
             eyebrow="Why Lakeside"
@@ -454,7 +454,7 @@ export default function HomePage() {
               </span>
             }
             intro={
-              <span className="text-pine-100">
+              <span className="text-frost-100">
                 We compete on reliability, not price. For the businesses and
                 homeowners who value good service, that&apos;s exactly the point.
               </span>
@@ -470,7 +470,7 @@ export default function HomePage() {
                   <d.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-4 text-lg font-bold text-white">{d.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-pine-200">
+                <p className="mt-2 text-sm leading-relaxed text-frost-200">
                   {d.body}
                 </p>
               </div>
@@ -533,7 +533,7 @@ export default function HomePage() {
       <Reviews />
 
       {/* ===== SERVICE AREA ===== */}
-      <section className="bg-pine-50/50 py-16 sm:py-20">
+      <section className="bg-frost-50/50 py-16 sm:py-20">
         <div className="container-x grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <SectionHeading

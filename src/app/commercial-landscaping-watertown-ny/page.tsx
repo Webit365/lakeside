@@ -101,13 +101,13 @@ export default function CommercialPage() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-pine-950">
+      <section className="relative overflow-hidden bg-frost-950">
         <div
           aria-hidden="true"
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(115deg, #0a1d15 0%, #153426 40%, #172a54 100%)",
+              "linear-gradient(115deg, #081a2b 0%, #103a5f 40%, #172a54 100%)",
           }}
         />
         <div
@@ -131,7 +131,7 @@ export default function CommercialPage() {
               <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.06] text-white sm:text-5xl">
                 Commercial Landscaping &amp; Snow Plowing in Watertown, NY
               </h1>
-              <p className="mt-5 max-w-xl text-lg text-pine-100">
+              <p className="mt-5 max-w-xl text-lg text-frost-100">
                 Protect your property, your image, and your liability with a
                 trusted local company. We keep Watertown and Northern NY
                 businesses open, accessible, and looking their best — every
@@ -148,7 +148,7 @@ export default function CommercialPage() {
                   label={`Call ${site.phone.contactName} · ${site.phone.display}`}
                 />
               </div>
-              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-pine-100">
+              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-frost-100">
                 {[
                   "Fully insured · COI on request",
                   "Seasonal contracts",
@@ -224,7 +224,7 @@ export default function CommercialPage() {
       </section>
 
       {/* SEGMENTS */}
-      <section className="bg-pine-50/50 py-16 sm:py-20">
+      <section className="bg-frost-50/50 py-16 sm:py-20">
         <div className="container-x">
           <SectionHeading
             eyebrow="Who we serve"
@@ -314,13 +314,13 @@ export default function CommercialPage() {
       </section>
 
       {/* BID CTA */}
-      <section className="bg-pine-900 py-14">
+      <section className="bg-frost-900 py-14">
         <div className="container-x flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
           <div className="max-w-2xl">
             <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
               Put your property on our route this season
             </h2>
-            <p className="mt-2 text-pine-100">
+            <p className="mt-2 text-frost-100">
               Tell us about your site and we&apos;ll prepare a clear commercial
               bid — snow, landscaping, or full year-round coverage.
             </p>

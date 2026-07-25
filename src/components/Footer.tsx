@@ -8,7 +8,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 bg-pine-950 text-pine-100">
+    <footer className="mt-16 bg-frost-950 text-frost-100">
       {/* CTA strip */}
       <div className="border-b border-white/10">
         <div className="container-x flex flex-col items-center justify-between gap-5 py-10 text-center md:flex-row md:text-left">
@@ -16,7 +16,7 @@ export function Footer() {
             <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
               Ready for reliable service you don&apos;t have to think about?
             </h2>
-            <p className="mt-2 text-pine-200">
+            <p className="mt-2 text-frost-200">
               Free, no-obligation estimates for commercial and residential
               properties across Northern NY.
             </p>
@@ -36,7 +36,7 @@ export function Footer() {
       <div className="container-x grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Logo variant="light" />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-pine-200/90">
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-frost-200/90">
             Commercial &amp; residential landscaping, snow plowing, and property
             maintenance in Watertown &amp; Northern New York. Fully insured,
             digitally dispatched, trusted since {site.foundedYear}.
@@ -62,7 +62,7 @@ export function Footer() {
             <li>
               <Link
                 href="/commercial-landscaping-watertown-ny"
-                className="text-pine-200 hover:text-white"
+                className="text-frost-200 hover:text-white"
               >
                 Commercial Landscaping
               </Link>
@@ -70,7 +70,7 @@ export function Footer() {
             <li>
               <Link
                 href="/residential-landscaping-watertown-ny"
-                className="text-pine-200 hover:text-white"
+                className="text-frost-200 hover:text-white"
               >
                 Residential Landscaping
               </Link>
@@ -79,7 +79,7 @@ export function Footer() {
               <li key={s.slug}>
                 <Link
                   href={`/services/${s.slug}`}
-                  className="text-pine-200 hover:text-white"
+                  className="text-frost-200 hover:text-white"
                 >
                   {s.navLabel}
                 </Link>
@@ -94,7 +94,7 @@ export function Footer() {
           </h3>
           <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
             {serviceAreas.slice(0, 12).map((area) => (
-              <li key={area} className="text-pine-200">
+              <li key={area} className="text-frost-200">
                 {area}
               </li>
             ))}
@@ -115,7 +115,7 @@ export function Footer() {
             <li>
               <a
                 href={site.phone.href}
-                className="flex items-start gap-3 text-pine-100 hover:text-white"
+                className="flex items-start gap-3 text-frost-100 hover:text-white"
               >
                 <PhoneIcon className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-300" />
                 <span>
@@ -131,13 +131,13 @@ export function Footer() {
             <li>
               <a
                 href={`mailto:${site.email}`}
-                className="flex items-start gap-3 text-pine-100 hover:text-white"
+                className="flex items-start gap-3 text-frost-100 hover:text-white"
               >
                 <MailIcon className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-300" />
                 {site.email}
               </a>
             </li>
-            <li className="flex items-start gap-3 text-pine-200">
+            <li className="flex items-start gap-3 text-frost-200">
               <MapPinIcon className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-300" />
               <span>
                 {site.address.street}
@@ -145,7 +145,7 @@ export function Footer() {
                 {site.address.city}, {site.address.state} {site.address.zip}
               </span>
             </li>
-            <li className="flex items-start gap-3 text-pine-200">
+            <li className="flex items-start gap-3 text-frost-200">
               <ClockIcon className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-300" />
               <span>{site.hours.display}</span>
             </li>

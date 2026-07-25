@@ -23,7 +23,7 @@ export function Photo({
   sizes?: string;
 }) {
   return (
-    <div className={`relative overflow-hidden bg-pine-950 ${rounded} ${className}`}>
+    <div className={`relative overflow-hidden bg-frost-950 ${rounded} ${className}`}>
       <Image
         src={src}
         alt={alt}

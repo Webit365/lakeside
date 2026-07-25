@@ -11,7 +11,7 @@ export function Breadcrumbs({
     <nav aria-label="Breadcrumb" className="text-sm">
       <ol
         className={`flex flex-wrap items-center gap-1.5 ${
-          light ? "text-pine-200" : "text-ink-muted"
+          light ? "text-frost-200" : "text-ink-muted"
         }`}
       >
         {items.map((item, i) => {

@@ -81,7 +81,7 @@ export function CtaBand({
   subtitle?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-pine-800">
+    <section className="relative overflow-hidden bg-frost-800">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-[0.15]"
@@ -95,7 +95,7 @@ export function CtaBand({
           <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
             {title}
           </h2>
-          <p className="mt-3 text-pine-100">{subtitle}</p>
+          <p className="mt-3 text-frost-100">{subtitle}</p>
         </div>
         <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
           <Link href="/contact" className="btn-primary btn-lg">
