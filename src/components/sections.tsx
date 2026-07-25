@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/lib/site";
 import {
   ShieldIcon,
@@ -89,6 +90,14 @@ export function CtaBand({
           backgroundImage:
             "radial-gradient(circle at 20% 20%, #93cdfd 0, transparent 40%), radial-gradient(circle at 80% 80%, #f9bd24 0, transparent 45%)",
         }}
+      />
+      <Image
+        src="/brand/lakeside-mark.png"
+        alt=""
+        aria-hidden="true"
+        width={288}
+        height={288}
+        className="pointer-events-none absolute -right-8 top-1/2 hidden h-72 w-72 -translate-y-1/2 opacity-[0.07] md:block"
       />
       <div className="container-x relative flex flex-col items-center gap-6 py-14 text-center md:flex-row md:justify-between md:text-left">
         <div className="max-w-2xl">

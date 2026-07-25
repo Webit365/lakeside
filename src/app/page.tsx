@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { site, serviceAreas } from "@/lib/site";
 import { services } from "@/lib/services";
 import { serviceIcons } from "@/components/icons";
@@ -124,6 +125,14 @@ export default function HomePage() {
             backgroundImage:
               "radial-gradient(circle at 85% 15%, rgba(147,205,253,0.35) 0, transparent 35%), radial-gradient(circle at 10% 90%, rgba(249,189,36,0.25) 0, transparent 40%)",
           }}
+        />
+        <Image
+          src="/brand/lakeside-mark.png"
+          alt=""
+          aria-hidden="true"
+          width={360}
+          height={360}
+          className="pointer-events-none absolute -left-16 -bottom-16 hidden h-80 w-80 opacity-[0.06] lg:block"
         />
         <div className="container-x relative grid gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
           <div className="animate-fade-up">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site, serviceAreas } from "@/lib/site";
 import { services } from "@/lib/services";
 import { Logo } from "./Logo";
@@ -155,7 +156,15 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs text-pine-300 md:flex-row">
-          <p>
+          <p className="flex items-center gap-2">
+            <Image
+              src="/brand/lakeside-mark.png"
+              alt=""
+              aria-hidden="true"
+              width={26}
+              height={26}
+              className="h-6 w-6"
+            />
             © {year} {site.legalName}. All rights reserved.
           </p>
           <p className="text-pine-400">
