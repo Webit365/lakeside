@@ -171,24 +171,16 @@ export default function HomePage() {
             </ul>
           </div>
 
-          {/* Hero visual — winter/summer split with floating stat */}
+          {/* Hero visual — the Lakeside crew, with floating rating */}
           <div className="relative animate-fade-up [animation-delay:120ms]">
-            <div className="grid grid-cols-2 gap-4">
-              <Photo
-                src="/photos/commercial-lawn.jpg"
-                alt="Freshly striped commercial lawn maintained by Lakeside in Watertown NY"
-                className="aspect-[3/4]"
-                sizes="(max-width: 1024px) 45vw, 24vw"
-                priority
-              />
-              <Photo
-                src="/photos/commercial-plowing-night.jpg"
-                alt="Lakeside plow truck clearing a commercial lot at night in Northern NY"
-                className="mt-8 aspect-[3/4]"
-                sizes="(max-width: 1024px) 45vw, 24vw"
-                priority
-              />
-            </div>
+            <Photo
+              src="/photos/crew-team.jpg"
+              alt="The Lakeside Outdoor Services crew in Watertown, New York"
+              className="aspect-[3/2] w-full"
+              rounded="rounded-3xl"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
+            />
             <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-2xl border border-pine-100 bg-white px-5 py-3.5 shadow-lift">
               <div className="flex -space-x-1 text-gold-500">
                 {Array.from({ length: 5 }).map((_, i) => (

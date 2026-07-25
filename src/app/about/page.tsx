@@ -125,9 +125,9 @@ export default function AboutPage() {
         <div className="container-x">
           <figure className="mx-auto max-w-4xl">
             <Photo
-              src="/photos/crew-team.jpg"
-              alt="The Lakeside Outdoor Services crew in Watertown, New York"
-              className="aspect-[3/2] w-full"
+              src="/photos/crew-truck.jpg"
+              alt="The Lakeside Outdoor Services team by the truck in Watertown, New York"
+              className="aspect-[16/9] w-full"
               rounded="rounded-3xl"
               sizes="(max-width: 1024px) 100vw, 900px"
             />
