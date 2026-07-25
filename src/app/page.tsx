@@ -530,6 +530,77 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== MEET DAVE ===== */}
+      <section className="bg-frost-50/50 py-16 sm:py-20">
+        <div className="container-x">
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
+            {/* Owner intro */}
+            <div className="flex flex-col items-center gap-6 sm:flex-row lg:border-r lg:border-pine-100 lg:pr-14">
+              <Photo
+                src="/photos/dave.jpg"
+                alt="Dave, owner of Lakeside Outdoor Services, in Watertown NY"
+                className="aspect-[4/5] w-40 flex-shrink-0 shadow-card sm:w-44"
+                sizes="180px"
+              />
+              <div className="text-center sm:text-left">
+                <h2 className="font-display text-3xl font-extrabold text-frost-900">
+                  Meet Dave
+                </h2>
+                <p className="mt-3 text-ink-muted">
+                  Owner of Lakeside Outdoor Services, Dave is hands-on,
+                  responsive, and committed to doing what&apos;s right for every
+                  property we care for.
+                </p>
+                <Link
+                  href="/about"
+                  className="mt-4 inline-flex items-center gap-1.5 font-bold text-frost-700 hover:text-frost-800"
+                >
+                  Read Our Story
+                  <ArrowRightIcon className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Trust features */}
+            <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4">
+              {[
+                {
+                  icon: ShieldIcon,
+                  title: "Fully Insured",
+                  body: "Complete protection for your property and ours.",
+                },
+                {
+                  icon: TruckIcon,
+                  title: "Digitally Dispatched",
+                  body: "Crews and equipment dispatched fast.",
+                },
+                {
+                  icon: SnowIcon,
+                  title: "24/7 Snow Response",
+                  body: "Always ready when winter hits.",
+                },
+                {
+                  icon: MapPinIcon,
+                  title: "Local & Reliable",
+                  body: "Proudly serving our community since 2010.",
+                },
+              ].map((f) => {
+                const Icon = f.icon;
+                return (
+                  <div key={f.title} className="text-center md:text-left">
+                    <Icon className="mx-auto h-9 w-9 text-frost-600 md:mx-0" />
+                    <h3 className="mt-3 font-display text-base font-bold text-ink">
+                      {f.title}
+                    </h3>
+                    <p className="mt-1.5 text-sm text-ink-muted">{f.body}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Reviews />
 
       {/* ===== SERVICE AREA ===== */}
