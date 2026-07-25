@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { pageMeta, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Our Services | Landscaping & Snow Management in Watertown, NY",
+  title: "Landscaping, Lawn Care & Snow Plowing Services | Watertown, NY",
   description:
     "Full-service commercial & residential landscaping, snow plowing, salting, lawn care, and property maintenance across Watertown & Northern New York. Explore all services.",
   path: "/services",

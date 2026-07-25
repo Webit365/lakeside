@@ -7,19 +7,36 @@ const sameAs = [site.social.google, site.social.facebook, site.social.instagram]
 
 const baseUrl = site.url.replace(/\/$/, "");
 
+const defaultOgImage = {
+  url: "/og-cover.jpg",
+  width: 1200,
+  height: 630,
+  alt: "The Lakeside Outdoor Services crew and truck in Watertown, NY",
+};
+
 /** Build canonical + OG metadata for a page. */
 export function pageMeta({
   title,
   description,
   path,
   images,
+  ogTitle,
+  ogDescription,
+  twitterTitle,
+  twitterDescription,
 }: {
   title: string;
   description: string;
   path: string;
   images?: string[];
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
 }): Metadata {
   const url = `${baseUrl}${path === "/" ? "" : path}`;
+  const ogImages = images ? images.map((src) => ({ url: src })) : [defaultOgImage];
+  const twitterImages = images ?? [defaultOgImage.url];
   return {
     // Absolute prevents the layout's "%s | Brand" template from double-appending
     // the brand, since these titles already include it where wanted.
@@ -27,19 +44,19 @@ export function pageMeta({
     description,
     alternates: { canonical: url },
     openGraph: {
-      title,
-      description,
+      title: ogTitle ?? title,
+      description: ogDescription ?? description,
       url,
       siteName: site.legalName,
       locale: "en_US",
       type: "website",
-      images: images ?? ["/opengraph-image"],
+      images: ogImages,
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
-      images: images ?? ["/opengraph-image"],
+      title: twitterTitle ?? ogTitle ?? title,
+      description: twitterDescription ?? ogDescription ?? description,
+      images: twitterImages,
     },
   };
 }
@@ -65,7 +82,7 @@ export function localBusinessSchema() {
     ...(sameAs.length ? { sameAs } : {}),
     foundingDate: String(site.foundedYear),
     priceRange: "$$",
-    image: `${baseUrl}/opengraph-image`,
+    image: `${baseUrl}/og-cover.jpg`,
     logo: `${baseUrl}/icon.png`,
     address: {
       "@type": "PostalAddress",
@@ -93,12 +110,16 @@ export function localBusinessSchema() {
       closes: h.closes,
     })),
     knowsAbout: [
-      "Commercial Snow Plowing",
-      "Commercial Landscaping",
-      "Snow Removal",
-      "Salting and De-Icing",
-      "Lawn Care",
+      "Landscaping",
+      "Lawn Mowing",
+      "Lawn Maintenance",
       "Property Maintenance",
+      "Snow Plowing",
+      "Snow Removal",
+      "Salting",
+      "Ice Management",
+      "Commercial Landscaping",
+      "Residential Landscaping",
     ],
   };
 }

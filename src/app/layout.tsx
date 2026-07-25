@@ -30,11 +30,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default:
-      "Lakeside Outdoor Services | Commercial Landscaping & Snow Plowing in Watertown, NY",
+      "Lakeside Outdoor Services | Landscaping, Snow Plowing & Salting in Watertown, NY",
     template: "%s | Lakeside Outdoor Services",
   },
   description:
-    "Watertown, NY's trusted local company for commercial & residential landscaping, snow plowing, salting, and property maintenance across Northern New York. Fully insured since 2010. Free estimates — call (315) 777-1809.",
+    "Residential and commercial landscaping, lawn mowing, property maintenance, snow plowing and salting in Watertown, NY. Fully insured since 2010. Request a free estimate.",
   applicationName: site.legalName,
   authors: [{ name: site.legalName }],
   creator: site.legalName,

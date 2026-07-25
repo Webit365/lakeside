@@ -30,11 +30,16 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = pageMeta({
-  title:
-    "Commercial Landscaping & Snow Plowing in Watertown, NY | Lakeside Outdoor Services",
+  title: "Landscaping, Snow Plowing & Salting Watertown NY | Lakeside",
   description:
-    "Watertown, NY's trusted local company for commercial & residential landscaping, snow plowing, salting & property maintenance across Northern New York. Fully insured since 2010. Free estimates — (315) 777-1809.",
+    "Residential and commercial landscaping, lawn mowing, property maintenance, snow plowing and salting in Watertown, NY. Fully insured. Request a free estimate.",
   path: "/",
+  ogTitle: "Landscaping, Snow Plowing & Salting in Watertown, NY",
+  ogDescription:
+    "Residential and commercial landscaping, lawn care, property maintenance, snow plowing and salting in Watertown, New York.",
+  twitterTitle: "Landscaping, Snow Plowing & Salting in Watertown, NY",
+  twitterDescription:
+    "Year-round residential and commercial property care from Lakeside Outdoor Services.",
 });
 
 const homeFaqs = [
@@ -136,23 +141,21 @@ export default function HomePage() {
         />
         <div className="container-x relative grid gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur">
-              <span className="flex h-2 w-2 rounded-full bg-pine-500" />
-              Watertown &amp; Northern NY · Since {site.foundedYear}
-            </div>
-            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl lg:text-[3.4rem]">
-              Year-Round Property Care in{" "}
-              <span className="text-gold-400">Watertown, NY</span>
-            </h1>
-            <p className="mt-4 font-display text-xl font-bold text-gold-400 sm:text-2xl">
-              Your Property. Our Priority. Every Season.
+            <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-frost-200 sm:text-sm">
+              <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-pine-500" />
+              Residential &amp; Commercial Landscaping, Snow Plowing &amp; Salting
+              · Watertown, NY
             </p>
+            <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.06] text-white sm:text-5xl lg:text-[3.4rem]">
+              Your Property. Our Priority.{" "}
+              <span className="text-gold-400">Every Season.</span>
+            </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-frost-100">
-              The trusted choice for residential and commercial property care in
-              Watertown, NY. From landscaping, lawn care, and grounds maintenance
-              to dependable snow plowing and ice management, we keep your property
-              looking its best and operating safely year-round. Fully insured,
-              digitally dispatched, and fast to respond.
+              Trusted residential and commercial property care in Watertown, NY.
+              From professional landscaping, lawn mowing, and year-round property
+              maintenance to dependable snow plowing, salting, and ice management,
+              Lakeside Outdoor Services keeps your property looking its best and
+              operating safely in every season.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

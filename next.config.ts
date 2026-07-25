@@ -8,6 +8,17 @@ const nextConfig: NextConfig = {
     // When you add real photos, next/image will optimize them automatically.
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    // Preserve equity from the previous WordPress site's URLs. The old blog
+    // (/tips-tricks/) has no 1:1 equivalent on the new site, so send it to the
+    // closest topical match (services) rather than the homepage.
+    // NOTE: add precise per-URL 301s here once the old sitemap / Search Console
+    // "Pages" export is available — see SEO report.
+    return [
+      { source: "/tips-tricks", destination: "/services", permanent: true },
+      { source: "/tips-tricks/:slug*", destination: "/services", permanent: true },
+    ];
+  },
   async headers() {
     const securityHeaders = [
       { key: "X-Content-Type-Options", value: "nosniff" },

@@ -16,7 +16,7 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = pageMeta({
-  title: "Contact Us & Free Quote | Lakeside Outdoor Services, Watertown NY",
+  title: "Contact Lakeside Outdoor Services | Free Estimate",
   description:
     "Request a free, no-obligation quote for landscaping, snow plowing, or property maintenance in Watertown & Northern NY. Call (315) 777-1809 or fill out our quick form.",
   path: "/contact",

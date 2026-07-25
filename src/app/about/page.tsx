@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 
 export const metadata: Metadata = pageMeta({
-  title: "About Lakeside Outdoor Services | Trusted in Watertown Since 2010",
+  title: "About Lakeside Outdoor Services | Watertown, NY",
   description:
     "Locally owned and operated since 2010, Lakeside Outdoor Services is Watertown NY's trusted company for commercial & residential landscaping and snow management. Meet the team behind the reliability.",
   path: "/about",
