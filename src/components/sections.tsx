@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
+import { getGoogleReviews, FALLBACK_REVIEWS } from "@/lib/reviews";
 import {
   ShieldIcon,
   TruckIcon,
@@ -121,31 +122,22 @@ export function CtaBand({
   );
 }
 
-// First entry is a real, verified Google review. The other two are clearly
-// labeled layout placeholders — paste your favorite real Google reviews here
-// (reviewer first name + last initial + town) to replace them.
-const reviews = [
-  {
-    text: "The best company out there!",
-    name: "Samantha W.",
-    detail: "Google review · Watertown",
-    real: true,
-  },
-  {
-    text: "Add a real review here — a commercial client praising reliable, on-time plowing and salting all winter works especially well for converting other businesses.",
-    name: "Your review here",
-    detail: "Commercial · Watertown",
-    real: false,
-  },
-  {
-    text: "Add a real review here — a residential customer praising detailed, professional lawn care reinforces the quality positioning.",
-    name: "Your review here",
-    detail: "Residential · Northern NY",
-    real: false,
-  },
-];
+export async function Reviews() {
+  // Live Google reviews (server-side, cached ~24h). Falls back to verified
+  // review(s) when the Featurable widget isn't configured — never placeholders.
+  const live = await getGoogleReviews();
+  const reviews = live?.reviews ?? FALLBACK_REVIEWS;
+  const averageRating = live?.averageRating ?? site.rating.value;
+  const totalCount = live?.totalCount ?? site.rating.count;
 
-export function Reviews() {
+  // Keep a 1- or 2-review fallback from looking sparse in a 3-up grid.
+  const gridClass =
+    reviews.length >= 3
+      ? "sm:grid-cols-2 lg:grid-cols-3"
+      : reviews.length === 2
+        ? "sm:grid-cols-2 max-w-3xl mx-auto"
+        : "max-w-md mx-auto";
+
   return (
     <section className="bg-white py-16 sm:py-20">
       <div className="container-x">
@@ -156,7 +148,7 @@ export function Reviews() {
             ))}
           </div>
           <p className="mt-3 text-sm font-semibold text-ink-muted">
-            Rated {site.rating.value}★ from {site.rating.count} reviews across
+            Rated {averageRating}★ from {totalCount} Google reviews across
             Northern NY
           </p>
           <SectionHeading
@@ -166,25 +158,16 @@ export function Reviews() {
           />
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {reviews.map((r, i) => (
-            <figure
-              key={i}
-              className={`card flex flex-col p-6 ${
-                r.real ? "" : "border-dashed opacity-70"
-              }`}
-            >
-              <div className="flex items-center gap-2">
-                <div className="flex gap-0.5 text-gold-500">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <StarIcon key={s} className="h-4 w-4" />
-                  ))}
-                </div>
-                {!r.real && (
-                  <span className="rounded bg-pine-50 px-1.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wide text-ink-muted">
-                    Sample slot
-                  </span>
-                )}
+        <div className={`mt-12 grid gap-6 ${gridClass}`}>
+          {reviews.map((r) => (
+            <figure key={r.id} className="card flex flex-col p-6">
+              <div
+                className="flex gap-0.5 text-gold-500"
+                aria-label={`${r.rating} out of 5 stars`}
+              >
+                {Array.from({ length: r.rating }).map((_, s) => (
+                  <StarIcon key={s} className="h-4 w-4" />
+                ))}
               </div>
               <blockquote className="mt-4 flex-1 text-ink-soft">
                 &ldquo;{r.text}&rdquo;
@@ -199,10 +182,15 @@ export function Reviews() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-ink-muted">
-          Showing your real {site.rating.value}★ Google rating ({site.rating.count}{" "}
-          reviews). Replace the two “sample slot” cards with your favorite real
-          reviews — see <code>src/components/sections.tsx</code>.
+        <p className="mt-8 text-center text-sm text-ink-muted">
+          <a
+            href={site.social.google}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-frost-700 underline-offset-2 hover:underline"
+          >
+            Read all {totalCount} reviews on Google →
+          </a>
         </p>
       </div>
     </section>
