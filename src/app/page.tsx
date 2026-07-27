@@ -542,9 +542,16 @@ export default function HomePage() {
           </div>
           <div className="mt-10 flex justify-center">
             <PhoneLink
-              className="btn-pine btn-lg"
-              iconClassName="h-5 w-5"
-              label={`Call or Text ${site.phone.contactName} Now · ${site.phone.display}`}
+              className="btn-pine btn-lg text-center"
+              iconClassName="h-5 w-5 flex-shrink-0"
+              label={
+                <>
+                  Call or Text {site.phone.contactName} Now{" "}
+                  <span className="whitespace-nowrap">
+                    · {site.phone.display}
+                  </span>
+                </>
+              }
             />
           </div>
         </div>
