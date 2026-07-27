@@ -205,14 +205,14 @@ export default function HomePage() {
               sizes="(max-width: 1024px) 100vw, 45vw"
               priority
             />
-            <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-2xl border border-pine-100 bg-white px-5 py-3.5 shadow-lift">
-              <div className="flex -space-x-1 text-gold-500">
+            <div className="absolute -bottom-5 left-1/2 flex w-max max-w-[calc(100%-1.5rem)] -translate-x-1/2 items-center gap-2.5 rounded-2xl border border-pine-100 bg-white px-4 py-2.5 shadow-lift sm:gap-3 sm:px-5 sm:py-3.5">
+              <div className="flex flex-shrink-0 -space-x-1 text-gold-500">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <StarIcon key={i} className="h-4 w-4" />
                 ))}
               </div>
               <div className="leading-tight">
-                <p className="text-sm font-bold text-ink">
+                <p className="whitespace-nowrap text-sm font-bold text-ink">
                   {site.rating.value}/5 · {site.rating.count}+ reviews
                 </p>
                 <p className="text-xs text-ink-muted">
