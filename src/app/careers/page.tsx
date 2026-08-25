@@ -26,6 +26,7 @@ export const metadata: Metadata = pageMeta({
   description:
     "Lakeside Outdoor Services is hiring for winter snow removal in Watertown, NY: loader operators, small equipment operators, and shovelers. Great pay, steady work. Apply online or call (315) 777-1809.",
   path: "/careers",
+  images: ["/careers/opengraph-image"],
 });
 
 const positions = [
