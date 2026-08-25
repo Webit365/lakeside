@@ -56,16 +56,12 @@ export default async function Image() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
           position: "relative",
-          padding: "60px 64px",
-          color: "white",
           backgroundColor: "#0b2340",
           fontFamily: display,
         }}
       >
-        {/* Background photo */}
+        {/* Background photo — fills the whole card, edge to edge */}
         {bg ? (
           <img
             src={bg}
@@ -81,14 +77,33 @@ export default async function Image() {
             }}
           />
         ) : null}
-        {/* Dark overlay for legibility — heaviest on the left where the text sits */}
+        {/* Base dim — knocks the photo back ~32% so it isn't too bright */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            backgroundColor: "rgba(4,10,20,0.34)",
+          }}
+        />
+        {/* Left scrim — darkens the headline side but never fully hides the photo */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             display: "flex",
             backgroundImage:
-              "linear-gradient(100deg, rgba(6,16,28,0.94) 0%, rgba(9,24,44,0.86) 40%, rgba(14,34,62,0.60) 72%, rgba(14,34,62,0.48) 100%)",
+              "linear-gradient(100deg, rgba(6,15,27,0.74) 0%, rgba(8,20,38,0.40) 40%, rgba(10,26,48,0.08) 70%, rgba(10,26,48,0) 100%)",
+          }}
+        />
+        {/* Bottom scrim — a soft gradient that fades into the photo (no hard edge) */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            backgroundImage:
+              "linear-gradient(0deg, rgba(5,12,24,0.78) 0%, rgba(5,12,24,0.52) 20%, rgba(6,15,28,0.22) 40%, rgba(6,15,28,0) 60%)",
           }}
         />
 
@@ -107,6 +122,18 @@ export default async function Image() {
           <path d="M12 2v20M4.5 5.5 12 12l7.5-6.5M4.5 18.5 12 12l7.5 6.5M2 12h20M5 8l2 4-2 4M19 8l-2 4 2 4" />
         </svg>
 
+        {/* Content layer — padded, laid over the full-bleed photo */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            padding: "58px 64px",
+            color: "white",
+          }}
+        >
         {/* Top row: logo + wordmark */}
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           {logo ? (
@@ -151,6 +178,7 @@ export default async function Image() {
               fontWeight: 800,
               fontSize: 84,
               lineHeight: 1.02,
+              textShadow: "0 2px 14px rgba(0,0,0,0.5)",
             }}
           >
             <div style={{ display: "flex" }}>Join our team</div>
@@ -163,7 +191,8 @@ export default async function Image() {
               marginTop: 22,
               fontSize: 30,
               fontWeight: 600,
-              color: "#cfe0f0",
+              color: "#ffffff",
+              textShadow: "0 1px 6px rgba(0,0,0,1)",
             }}
           >
             Loader Operators&nbsp;&nbsp;·&nbsp;&nbsp;Small Equipment
@@ -171,39 +200,48 @@ export default async function Image() {
           </div>
         </div>
 
-        {/* Bottom row */}
+        {/* Bottom row — supporting line (the phone sits in its own corner card) */}
         <div
           style={{
             display: "flex",
+            fontSize: 26,
+            fontWeight: 600,
+            color: "#e6f0fa",
+            textShadow: "0 1px 6px rgba(0,0,0,1)",
+          }}
+        >
+          Great pay · Steady work · Watertown, NY
+        </div>
+        </div>
+
+        {/* Apply Today card — bottom-right corner, on its own panel for legibility */}
+        <div
+          style={{
+            position: "absolute",
+            right: 40,
+            bottom: 34,
+            display: "flex",
+            flexDirection: "column",
             alignItems: "flex-end",
-            justifyContent: "space-between",
+            padding: "12px 22px 14px",
+            borderRadius: 18,
+            backgroundColor: "rgba(7,15,28,0.74)",
+            border: "1px solid rgba(255,255,255,0.16)",
           }}
         >
           <div
             style={{
               display: "flex",
-              fontSize: 26,
+              fontSize: 20,
               fontWeight: 600,
-              color: "#9fc4e6",
+              letterSpacing: 2,
+              color: "#ffcf4d",
             }}
           >
-            Great pay · Steady work · Watertown, NY
+            APPLY TODAY
           </div>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
-            <div
-              style={{
-                display: "flex",
-                fontSize: 20,
-                fontWeight: 600,
-                letterSpacing: 2,
-                color: "#f9bd24",
-              }}
-            >
-              APPLY TODAY
-            </div>
-            <div style={{ display: "flex", fontSize: 44, fontWeight: 800 }}>
-              {site.phone.display}
-            </div>
+          <div style={{ display: "flex", fontSize: 46, fontWeight: 800, color: "white" }}>
+            {site.phone.display}
           </div>
         </div>
 
