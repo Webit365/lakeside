@@ -43,10 +43,10 @@ export const site = {
     instagram: "",
   },
   rating: {
-    // Real aggregate from the public Google/Birdeye listing (verified 2026-07).
-    // Update as your review count grows.
-    value: 4.4,
-    count: 63,
+    // Real aggregate from the public Google Business Profile (verified 2026-08).
+    // Keep in sync with the live Google listing so schema aggregateRating matches.
+    value: 4.3,
+    count: 50,
   },
 } as const;
 

@@ -57,14 +57,33 @@ const MAX_REVIEWS = 6; // keep the section tight
 const MIN_RATING = 4; // only surface 4–5★ reviews as social proof
 const MAX_CHARS = 220; // trim very long reviews to a teaser + link to Google
 
-/** Verified review(s) shown when the live feed isn't configured or is down. */
+/**
+ * Verified 5-star Google reviews, shown when the live Featurable feed isn't
+ * configured or is down. These are real reviews from the Google Business
+ * Profile (verified from the public listing, Aug 2026), lightly cleaned for
+ * typos only. Do not add anything that isn't a genuine review.
+ */
 export const FALLBACK_REVIEWS: GoogleReview[] = [
+  {
+    id: "kamdin-h",
+    name: "Kamdin H.",
+    text: "I contacted them and within the same evening got a phone call back. The team at Lakeside Outdoor Services was extremely easy to work with, explained what I needed done, and got it done the next day for a reasonable price. I can't thank them enough or recommend someone better.",
+    rating: 5,
+    detail: "Verified Google review",
+  },
+  {
+    id: "wade-s",
+    name: "Wade S.",
+    text: "Dave is great at what he does and has always gone above and beyond for my wife and her crazy ideas and wants.",
+    rating: 5,
+    detail: "Verified Google review",
+  },
   {
     id: "samantha-w",
     name: "Samantha W.",
     text: "The best company out there!",
     rating: 5,
-    detail: "Google review · Watertown",
+    detail: "Verified Google review",
   },
 ];
 
