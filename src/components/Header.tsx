@@ -69,7 +69,7 @@ export function Header() {
                 <div key={item.label} className="group relative">
                   <Link
                     href={item.href}
-                    className="inline-flex items-center gap-1 rounded-lg px-3 py-2 text-[0.95rem] font-semibold text-ink-soft transition-colors hover:bg-pine-50 hover:text-pine-800"
+                    className="inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-3 py-2 text-[0.95rem] font-semibold text-ink-soft transition-colors hover:bg-pine-50 hover:text-pine-800"
                   >
                     {item.label}
                     <svg
@@ -104,20 +104,11 @@ export function Header() {
                     </div>
                   </div>
                 </div>
-              ) : item.href === "/careers" ? (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="ml-1 inline-flex items-center gap-1.5 rounded-lg bg-gold-400 px-3 py-2 text-[0.95rem] font-bold text-ink transition-colors hover:bg-gold-300"
-                >
-                  <span className="flex h-2 w-2 rounded-full bg-pine-700" />
-                  {item.label}
-                </Link>
               ) : (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="rounded-lg px-3 py-2 text-[0.95rem] font-semibold text-ink-soft transition-colors hover:bg-pine-50 hover:text-pine-800"
+                  className="whitespace-nowrap rounded-lg px-3 py-2 text-[0.95rem] font-semibold text-ink-soft transition-colors hover:bg-pine-50 hover:text-pine-800"
                 >
                   {item.label}
                 </Link>
@@ -126,9 +117,20 @@ export function Header() {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden items-center gap-2.5 lg:flex">
-            <PhoneLink className="btn-outline btn-md" iconClassName="h-4 w-4" />
-            <Link href="/contact" className="btn-primary btn-md">
+          <div className="hidden items-center gap-2 lg:flex">
+            <Link
+              href="/careers"
+              className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-gold-400 px-3 py-2 text-[0.9rem] font-bold text-ink transition-colors hover:bg-gold-300"
+            >
+              <span className="flex h-2 w-2 rounded-full bg-pine-700" />
+              We&apos;re Hiring
+            </Link>
+            <PhoneLink
+              className="btn-outline btn-md !px-3"
+              iconClassName="h-4 w-4"
+              showLabel={false}
+            />
+            <Link href="/contact" className="btn-primary btn-md whitespace-nowrap">
               Free Quote
               <ArrowRightIcon className="h-4 w-4" />
             </Link>
@@ -225,14 +227,6 @@ export function Header() {
                       </div>
                     )}
                   </>
-                ) : item.href === "/careers" ? (
-                  <Link
-                    href={item.href}
-                    className="flex items-center gap-2 py-3 text-base font-bold text-pine-800"
-                  >
-                    <span className="flex h-2.5 w-2.5 rounded-full bg-gold-400" />
-                    {item.label}
-                  </Link>
                 ) : (
                   <Link
                     href={item.href}
@@ -245,6 +239,13 @@ export function Header() {
             ))}
 
             <div className="mt-5 flex flex-col gap-3">
+              <Link
+                href="/careers"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gold-400 px-4 py-3 text-base font-bold text-ink transition-colors hover:bg-gold-300"
+              >
+                <span className="flex h-2.5 w-2.5 rounded-full bg-pine-700" />
+                We&apos;re Hiring — Apply Now
+              </Link>
               <Link href="/contact" className="btn-primary btn-lg w-full">
                 Get My Free Quote
                 <ArrowRightIcon className="h-5 w-5" />

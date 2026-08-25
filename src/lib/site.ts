@@ -145,5 +145,4 @@ export const nav: NavItem[] = [
   },
   { label: "Service Areas", href: "/service-areas" },
   { label: "About", href: "/about" },
-  { label: "We're Hiring", href: "/careers" },
 ];
