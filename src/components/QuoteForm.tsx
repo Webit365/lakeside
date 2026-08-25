@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, FormEvent } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { site } from "@/lib/site";
 import { CheckIcon, PhoneIcon, BuildingIcon, HomeIcon } from "./icons";
@@ -29,6 +29,10 @@ export function QuoteForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [selected, setSelected] = useState<string[]>([]);
+  // Time-trap: first-render time on the client, used to reject instant bot
+  // submissions (see /api/quote). Refs aren't hydrated, so this is the real
+  // time the visitor's browser rendered the form.
+  const mountedAt = useRef(Date.now());
 
   useEffect(() => {
     if (params.get("type") === "commercial") setMode("commercial");
@@ -46,7 +50,11 @@ export function QuoteForm() {
 
     const form = e.currentTarget;
     const fd = new FormData(form);
-    const payload: Record<string, string> = { type: mode, services: selected.join(", ") };
+    const payload: Record<string, string> = {
+      type: mode,
+      services: selected.join(", "),
+      elapsed: String(Date.now() - mountedAt.current),
+    };
     fd.forEach((v, k) => {
       if (typeof v === "string") payload[k] = v;
     });

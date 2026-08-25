@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { site } from "@/lib/site";
+import { sendLeadEmail } from "@/lib/mailer";
 
 export const runtime = "nodejs";
 
@@ -36,6 +36,14 @@ export async function POST(req: Request) {
 
   // Honeypot — bots fill hidden fields. Silently accept to waste their time.
   if (data.company_website) {
+    return NextResponse.json({ ok: true });
+  }
+
+  // Time-trap — a real applicant takes several seconds to fill the form; bots
+  // submit near-instantly. `elapsed` is ms since the form mounted. Silently
+  // accept (like the honeypot) so we don't tip off the bot.
+  const elapsed = Number(data.elapsed);
+  if (Number.isFinite(elapsed) && elapsed < 3000) {
     return NextResponse.json({ ok: true });
   }
 
@@ -81,13 +89,31 @@ export async function POST(req: Request) {
       )}.</p>
     </div>`;
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.LEAD_TO_EMAIL || site.email;
-  const from = process.env.LEAD_FROM_EMAIL || "onboarding@resend.dev";
+  const text =
+    `New job application — submitted via lakesidenny.com/careers\n\n` +
+    Object.entries(FIELD_LABELS)
+      .filter(([k]) => data[k])
+      .map(([k, label]) => `${label}: ${data[k]}`)
+      .join("\n");
 
-  // If email isn't configured yet, log the application and still succeed so the
-  // form works in preview/staging. Configure RESEND_API_KEY to enable email.
-  if (!apiKey) {
+  // Applications go to the owner + manager. Override via LEAD_TO_EMAIL
+  // (comma-separated) in the environment if the recipient list changes.
+  const to = (process.env.LEAD_TO_EMAIL || "dave@lakesidenny.com, aerial1002@gmail.com")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+
+  const result = await sendLeadEmail({
+    to,
+    subject,
+    html,
+    text,
+    replyTo: email || undefined,
+  });
+
+  // Not configured yet (no SES env vars) — log and still succeed so the form
+  // works in preview/staging. Configure SES in Vercel to enable delivery.
+  if (result.status === "skipped") {
     console.log("[apply] Email not configured. Application received:", {
       subject,
       ...data,
@@ -95,37 +121,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true, delivered: false });
   }
 
-  try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: `Lakeside Careers <${from}>`,
-        to: [to],
-        reply_to: email || undefined,
-        subject,
-        html,
-      }),
-    });
-
-    if (!res.ok) {
-      const detail = await res.text();
-      console.error("[apply] Resend error:", res.status, detail);
-      return NextResponse.json(
-        { ok: false, error: "We couldn't send your application. Please call us." },
-        { status: 502 }
-      );
-    }
-
-    return NextResponse.json({ ok: true, delivered: true });
-  } catch (err) {
-    console.error("[apply] Send failed:", err);
+  if (result.status === "failed") {
     return NextResponse.json(
-      { ok: false, error: "Something went wrong. Please call us instead." },
-      { status: 500 }
+      { ok: false, error: "We couldn't send your application. Please call us." },
+      { status: 502 }
     );
   }
+
+  return NextResponse.json({ ok: true, delivered: true });
 }

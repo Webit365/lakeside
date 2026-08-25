@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, FormEvent } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { site } from "@/lib/site";
 import { CheckIcon, PhoneIcon } from "./icons";
@@ -25,6 +25,10 @@ export function ApplyForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [selected, setSelected] = useState<string[]>([]);
+  // Time-trap: first-render time on the client, used to reject instant bot
+  // submissions (see /api/apply). Refs aren't hydrated, so this is the real
+  // time the visitor's browser rendered the form.
+  const mountedAt = useRef(Date.now());
 
   // Allow deep-linking a pre-selected position, e.g. /careers?position=Shoveler
   useEffect(() => {
@@ -44,7 +48,10 @@ export function ApplyForm() {
 
     const form = e.currentTarget;
     const fd = new FormData(form);
-    const payload: Record<string, string> = { positions: selected.join(", ") };
+    const payload: Record<string, string> = {
+      positions: selected.join(", "),
+      elapsed: String(Date.now() - mountedAt.current),
+    };
     fd.forEach((v, k) => {
       if (typeof v === "string") payload[k] = v;
     });
