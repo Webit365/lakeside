@@ -28,13 +28,11 @@ async function loadFont(weight: number): Promise<ArrayBuffer | null> {
   }
 }
 
-// Brand logo mark, embedded as a data URI (read at build time).
-function loadLogo(): string | null {
+// Read a public image file as a data URI at build time.
+function loadImage(relPath: string, mime: string): string | null {
   try {
-    const buf = readFileSync(
-      join(process.cwd(), "public/brand/lakeside-mark.png")
-    );
-    return `data:image/png;base64,${buf.toString("base64")}`;
+    const buf = readFileSync(join(process.cwd(), relPath));
+    return `data:${mime};base64,${buf.toString("base64")}`;
   } catch {
     return null;
   }
@@ -42,7 +40,8 @@ function loadLogo(): string | null {
 
 export default async function Image() {
   const [bold, semi] = await Promise.all([loadFont(800), loadFont(600)]);
-  const logo = loadLogo();
+  const logo = loadImage("public/brand/lakeside-mark.png", "image/png");
+  const bg = loadImage("public/photos/snow-plow-night.jpg", "image/jpeg");
 
   const fonts = [
     ...(bold ? [{ name: "Bricolage", data: bold, weight: 800 as const }] : []),
@@ -63,19 +62,33 @@ export default async function Image() {
           padding: "60px 64px",
           color: "white",
           backgroundColor: "#0b2340",
-          backgroundImage:
-            "linear-gradient(115deg, #081a2b 0%, #103a5f 48%, #17325c 100%)",
           fontFamily: display,
         }}
       >
-        {/* Glow overlay */}
+        {/* Background photo */}
+        {bg ? (
+          <img
+            src={bg}
+            alt=""
+            width={1200}
+            height={630}
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        ) : null}
+        {/* Dark overlay for legibility — heaviest on the left where the text sits */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             display: "flex",
             backgroundImage:
-              "radial-gradient(circle at 88% 12%, rgba(147,205,253,0.30) 0, rgba(147,205,253,0) 38%), radial-gradient(circle at 6% 96%, rgba(249,189,36,0.22) 0, rgba(249,189,36,0) 42%)",
+              "linear-gradient(100deg, rgba(6,16,28,0.94) 0%, rgba(9,24,44,0.86) 40%, rgba(14,34,62,0.60) 72%, rgba(14,34,62,0.48) 100%)",
           }}
         />
 
@@ -97,7 +110,6 @@ export default async function Image() {
         {/* Top row: logo + wordmark */}
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           {logo ? (
-            // eslint-disable-next-line @next/next/no-img-element
             <img src={logo} height={66} width={66} alt="" />
           ) : null}
           <div

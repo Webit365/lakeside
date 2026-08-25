@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/lib/site";
 import { ApplyForm } from "@/components/ApplyForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -109,20 +110,21 @@ export default function CareersPage() {
 
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-frost-950">
+        <Image
+          src="/photos/snow-plow-night.jpg"
+          alt="A Lakeside plow truck and loader clearing snow on a Watertown street at night"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Dark gradient overlay — heaviest on the left where the text sits */}
         <div
           aria-hidden="true"
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(115deg, #081a2b 0%, #103a5f 45%, #172a54 100%)",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-30"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 85% 15%, rgba(147,205,253,0.35) 0, transparent 35%), radial-gradient(circle at 10% 90%, rgba(249,189,36,0.25) 0, transparent 40%)",
+              "linear-gradient(100deg, rgba(6,16,28,0.94) 0%, rgba(10,28,52,0.82) 42%, rgba(16,40,74,0.5) 72%, rgba(16,40,74,0.35) 100%)",
           }}
         />
         <div className="container-x relative py-14 lg:py-20">
