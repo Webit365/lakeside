@@ -54,7 +54,7 @@ const WIDGET_ID = process.env.FEATURABLE_WIDGET_ID?.trim();
 const ENDPOINT = "https://api.featurable.com/v1/widgets";
 
 const MAX_REVIEWS = 6; // keep the section tight
-const MIN_RATING = 4; // only surface 4–5★ reviews as social proof
+const MIN_RATING = 5; // only surface 5★ reviews as social proof
 const MAX_CHARS = 220; // trim very long reviews to a teaser + link to Google
 
 /**
