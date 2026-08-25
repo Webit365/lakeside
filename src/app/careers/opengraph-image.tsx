@@ -3,9 +3,9 @@ import { readFileSync } from "fs";
 import { join } from "path";
 import { site } from "@/lib/site";
 
-// Static generation at build time — this route has no dynamic params.
+// Static generation at build time, this route has no dynamic params.
 export const alt =
-  "Now Hiring at Lakeside Outdoor Services — winter snow removal jobs in Watertown, NY";
+  "Now Hiring at Lakeside Outdoor Services, winter snow removal jobs in Watertown, NY";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -61,7 +61,7 @@ export default async function Image() {
           fontFamily: display,
         }}
       >
-        {/* Background photo — fills the whole card, edge to edge */}
+        {/* Background photo, fills the whole card, edge to edge */}
         {bg ? (
           <img
             src={bg}
@@ -77,7 +77,7 @@ export default async function Image() {
             }}
           />
         ) : null}
-        {/* Base dim — knocks the photo back ~32% so it isn't too bright */}
+        {/* Base dim, knocks the photo back ~32% so it isn't too bright */}
         <div
           style={{
             position: "absolute",
@@ -86,7 +86,7 @@ export default async function Image() {
             backgroundColor: "rgba(4,10,20,0.34)",
           }}
         />
-        {/* Left scrim — darkens the headline side but never fully hides the photo */}
+        {/* Left scrim, darkens the headline side but never fully hides the photo */}
         <div
           style={{
             position: "absolute",
@@ -96,7 +96,7 @@ export default async function Image() {
               "linear-gradient(100deg, rgba(6,15,27,0.74) 0%, rgba(8,20,38,0.40) 40%, rgba(10,26,48,0.08) 70%, rgba(10,26,48,0) 100%)",
           }}
         />
-        {/* Bottom scrim — a soft gradient that fades into the photo (no hard edge) */}
+        {/* Bottom scrim, a soft gradient that fades into the photo (no hard edge) */}
         <div
           style={{
             position: "absolute",
@@ -122,7 +122,7 @@ export default async function Image() {
           <path d="M12 2v20M4.5 5.5 12 12l7.5-6.5M4.5 18.5 12 12l7.5 6.5M2 12h20M5 8l2 4-2 4M19 8l-2 4 2 4" />
         </svg>
 
-        {/* Content layer — padded, laid over the full-bleed photo */}
+        {/* Content layer, padded, laid over the full-bleed photo */}
         <div
           style={{
             position: "absolute",
@@ -200,7 +200,7 @@ export default async function Image() {
           </div>
         </div>
 
-        {/* Bottom row — supporting line (the phone sits in its own corner card) */}
+        {/* Bottom row, supporting line (the phone sits in its own corner card) */}
         <div
           style={{
             display: "flex",
@@ -214,7 +214,7 @@ export default async function Image() {
         </div>
         </div>
 
-        {/* Apply Today card — bottom-right corner, on its own panel for legibility */}
+        {/* Apply Today card, bottom-right corner, on its own panel for legibility */}
         <div
           style={{
             position: "absolute",

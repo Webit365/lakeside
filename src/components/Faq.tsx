@@ -1,7 +1,7 @@
 import type { FAQ } from "@/lib/services";
 import { SectionHeading } from "./sections";
 
-/** Accessible FAQ using native <details> — no JS, great for SEO + speed. */
+/** Accessible FAQ using native <details>, no JS, great for SEO + speed. */
 export function FaqSection({
   faqs,
   eyebrow = "Questions",

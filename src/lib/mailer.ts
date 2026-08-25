@@ -7,7 +7,7 @@ import { SESv2Client, SendEmailCommand } from "@aws-sdk/client-sesv2";
  * owner), so no per-recipient verification is needed once the account has
  * production access.
  *
- * Required env (set in Vercel — copy from another Webit365 project):
+ * Required env (set in Vercel, copy from another Webit365 project):
  *   AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION (us-east-1),
  *   SES_FROM  e.g.  Lakeside Outdoor Services <no-reply@webit365.com>
  *
@@ -33,7 +33,7 @@ export async function sendLeadEmail(opts: {
     .filter(Boolean);
 
   if (!AWS_ACCESS_KEY_ID || !AWS_SECRET_ACCESS_KEY || !SES_FROM) {
-    console.warn("[mailer] SES not configured — skipping email to", toAddresses);
+    console.warn("[mailer] SES not configured, skipping email to", toAddresses);
     return { status: "skipped" };
   }
 

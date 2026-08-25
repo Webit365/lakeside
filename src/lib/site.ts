@@ -24,7 +24,7 @@ export const site = {
     stateFull: "New York",
     zip: "13601",
     country: "US",
-    // Approx coordinates for Watertown, NY — refine with exact GBP coords if desired.
+    // Approx coordinates for Watertown, NY, refine with exact GBP coords if desired.
     lat: 43.9748,
     lng: -75.9108,
   },
@@ -37,7 +37,7 @@ export const site = {
     ],
   },
   social: {
-    // Real profile URLs — feed the schema "sameAs" for brand/local SEO.
+    // Real profile URLs, feed the schema "sameAs" for brand/local SEO.
     google: "https://share.google/MpPIihNKRbfvtMunV", // Google Business Profile share link
     facebook: "https://www.facebook.com/lakesideoutdoorservices/",
     instagram: "",

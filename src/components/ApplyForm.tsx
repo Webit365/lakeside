@@ -13,7 +13,7 @@ const positionOptions = [
   "Shoveler",
   "Snow Plow Driver",
   "Landscaping / Lawn Crew",
-  "Not sure — open to anything",
+  "Not sure, open to anything",
 ];
 
 const inputCls =
@@ -82,11 +82,11 @@ export function ApplyForm() {
           <CheckIcon className="h-7 w-7" strokeWidth={2.5} />
         </div>
         <h3 className="mt-4 font-display text-2xl font-bold text-ink">
-          Application received — thank you!
+          Application received, thank you!
         </h3>
         <p className="mx-auto mt-2 max-w-md text-ink-muted">
           {site.phone.contactName} will review your info and reach out about next
-          steps. Want to talk sooner? Give us a call — we&apos;re hiring now.
+          steps. Want to talk sooner? Give us a call, we&apos;re hiring now.
         </p>
         <a href={site.phone.href} className="btn-pine btn-lg mx-auto mt-6">
           <PhoneIcon className="h-5 w-5" />
@@ -219,7 +219,7 @@ export function ApplyForm() {
               Select…
             </option>
             <option>Yes</option>
-            <option>Yes — CDL</option>
+            <option>Yes, CDL</option>
             <option>No</option>
           </select>
         </div>
@@ -253,7 +253,7 @@ export function ApplyForm() {
           name="experience"
           rows={4}
           className={inputCls}
-          placeholder="Tell us about any equipment you've run (loaders, skid steers, plow trucks), snow removal, landscaping, or general labor experience. New to the work? Tell us that too — we train."
+          placeholder="Tell us about any equipment you've run (loaders, skid steers, plow trucks), snow removal, landscaping, or general labor experience. New to the work? Tell us that too, we train."
         />
       </div>
 

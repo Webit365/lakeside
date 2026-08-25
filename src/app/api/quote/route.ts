@@ -34,12 +34,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "Invalid request." }, { status: 400 });
   }
 
-  // Honeypot — bots fill hidden fields. Silently accept to waste their time.
+  // Honeypot, bots fill hidden fields. Silently accept to waste their time.
   if (data.company_website) {
     return NextResponse.json({ ok: true });
   }
 
-  // Time-trap — a real visitor takes several seconds to fill the form; bots
+  // Time-trap, a real visitor takes several seconds to fill the form; bots
   // submit near-instantly. `elapsed` is ms since the form mounted. Silently
   // accept (like the honeypot) so we don't tip off the bot.
   const elapsed = Number(data.elapsed);
@@ -65,7 +65,7 @@ export async function POST(req: Request) {
   }
 
   const isCommercial = data.type === "commercial";
-  const subject = `${isCommercial ? "🏢 Commercial" : "🏡 Residential"} quote request — ${name}`;
+  const subject = `${isCommercial ? "🏢 Commercial" : "🏡 Residential"} quote request, ${name}`;
 
   const rows = Object.entries(FIELD_LABELS)
     .filter(([k]) => data[k])
@@ -86,7 +86,7 @@ export async function POST(req: Request) {
     </div>`;
 
   const text =
-    `New ${isCommercial ? "commercial" : "residential"} quote request — submitted via lakesidenny.com\n\n` +
+    `New ${isCommercial ? "commercial" : "residential"} quote request, submitted via lakesidenny.com\n\n` +
     Object.entries(FIELD_LABELS)
       .filter(([k]) => data[k])
       .map(([k, label]) => `${label}: ${data[k]}`)
@@ -107,7 +107,7 @@ export async function POST(req: Request) {
     replyTo: email || undefined,
   });
 
-  // Not configured yet (no SES env vars) — log and still succeed so the form
+  // Not configured yet (no SES env vars), log and still succeed so the form
   // works in preview/staging. Configure SES in Vercel to enable delivery.
   if (result.status === "skipped") {
     console.log("[quote] Email not configured. Lead received:", {

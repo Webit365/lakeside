@@ -254,7 +254,7 @@ export default async function ServicePage({
 
       <FaqSection
         faqs={service.faqs}
-        title={`${service.navLabel} — questions & answers`}
+        title={`${service.navLabel}: your questions answered`}
       />
 
       {/* RELATED */}

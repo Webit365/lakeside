@@ -27,7 +27,7 @@ export const metadata: Metadata = pageMeta({
   title:
     "Residential Landscaping & Lawn Care in Watertown, NY | Lakeside Outdoor Services",
   description:
-    "Professional residential landscaping, lawn mowing, and snow plowing in Watertown & Northern NY. For homeowners who want it done right — reliable, detailed, and dependable. Call (315) 777-1809.",
+    "Professional residential landscaping, lawn mowing, and snow plowing in Watertown & Northern NY. For homeowners who want it done right, reliable, detailed, and dependable. Call (315) 777-1809.",
   path: "/residential-landscaping-watertown-ny",
 });
 
@@ -38,19 +38,19 @@ const residentialFaqs = [
   },
   {
     q: "Will the same crew take care of my property each time?",
-    a: "We keep a concentrated local route and consistent crews, so the people caring for your property get to know it — how you like it done and what needs attention. That consistency is a big part of the quality difference.",
+    a: "We keep a concentrated local route and consistent crews, so the people caring for your property get to know it, how you like it done and what needs attention. That consistency is a big part of the quality difference.",
   },
   {
     q: "Can you handle my lawn in summer and plow my driveway in winter?",
-    a: "Absolutely. Many homeowners use us year-round — mowing and landscaping in the warm months, dependable driveway snow plowing and salting in winter. One trusted local company, no gaps.",
+    a: "Absolutely. Many homeowners use us year-round: mowing and landscaping in the warm months, dependable driveway snow plowing and salting in winter. One trusted local company, no gaps.",
   },
   {
     q: "Do you do landscape design and new plantings, or just maintenance?",
-    a: "Both. We design and install custom landscaping — beds, plantings, mulch, and grading — and we maintain existing landscapes. Whether you want a refresh or a full redesign, we can help.",
+    a: "Both. We design and install custom landscaping (beds, plantings, mulch, and grading) and we maintain existing landscapes. Whether you want a refresh or a full redesign, we can help.",
   },
   {
     q: "How quickly will you plow my driveway after a storm?",
-    a: "Because we keep a tight service area around Watertown and Fort Drum, our response is fast. We clear during and after storms based on your trigger depth, prioritizing getting you out for work on time.",
+    a: "Because we keep a tight service area around Watertown and Fort Drum, our response is fast. We don't wait for a set amount of snow to fall. Our crews run priority routes continuously during and after the storm, so your driveway is clear in time for the morning commute.",
   },
 ];
 
@@ -96,7 +96,7 @@ export default function ResidentialPage() {
                 Residential Landscaping &amp; Lawn Care in Watertown, NY
               </h1>
               <p className="mt-5 max-w-xl text-lg text-frost-100">
-                For homeowners who want it done right — not just done. Reliable
+                For homeowners who want it done right, not just done. Reliable
                 mowing with a detailed finish, custom landscaping, and
                 dependable driveway plowing from a local crew that treats your
                 property with care.
@@ -140,7 +140,7 @@ export default function ResidentialPage() {
             align="center"
             eyebrow="The quality difference"
             title="Service worth paying for"
-            intro="You want your property cared for, not just cut. That's the standard we hold — the detail, reliability, and respect a good home deserves."
+            intro="You want your property cared for, not just cut. That's the standard we hold, the detail, reliability, and respect a good home deserves."
             className="mx-auto"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -211,7 +211,7 @@ export default function ResidentialPage() {
       <FaqSection
         faqs={residentialFaqs}
         eyebrow="Residential FAQ"
-        title="Residential landscaping & snow — questions answered"
+        title="Residential landscaping & snow: your questions answered"
       />
 
       <CtaBand

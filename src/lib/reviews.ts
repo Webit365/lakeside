@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
  * Setup: create a free widget at featurable.com, connect the Google profile,
  * then Embed → API to copy the widget ID. Set it as FEATURABLE_WIDGET_ID in
  * the environment (e.g. Vercel → Settings → Environment Variables). Until it's
- * set, the site falls back to the verified review(s) in FALLBACK_REVIEWS — it
+ * set, the site falls back to the verified review(s) in FALLBACK_REVIEWS, it
  * never shows placeholder or fabricated reviews.
  */
 

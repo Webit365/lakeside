@@ -23,7 +23,7 @@ import {
 
 export const metadata: Metadata = pageMeta({
   title:
-    "Now Hiring — Winter Snow Removal Jobs in Watertown, NY | Lakeside Outdoor Services",
+    "Now Hiring: Winter Snow Removal Jobs in Watertown, NY | Lakeside Outdoor Services",
   description:
     "Lakeside Outdoor Services is hiring for winter snow removal in Watertown, NY: loader operators, small equipment operators, and shovelers. Great pay, steady work. Apply online or call (315) 777-1809.",
   path: "/careers",
@@ -34,7 +34,7 @@ const positions = [
   {
     icon: WheelLoaderIcon,
     title: "Loader Operators",
-    body: "Run wheel loaders and heavy equipment clearing commercial lots and snow piles. Experience preferred — reliability required.",
+    body: "Run wheel loaders and heavy equipment clearing commercial lots and snow piles. Experience preferred, reliability required.",
   },
   {
     icon: TruckIcon,
@@ -57,7 +57,7 @@ const perks = [
   {
     icon: ClockIcon,
     title: "Steady work",
-    body: "Consistent winter hours with a busy, established local company — not a one-storm gig.",
+    body: "Consistent winter hours with a busy, established local company, not a one-storm gig.",
   },
   {
     icon: UsersIcon,
@@ -118,7 +118,7 @@ export default function CareersPage() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Dark gradient overlay — heaviest on the left where the text sits */}
+        {/* Dark gradient overlay, heaviest on the left where the text sits */}
         <div
           aria-hidden="true"
           className="absolute inset-0"
@@ -278,7 +278,7 @@ export default function CareersPage() {
             <ul className="mt-6 space-y-3">
               <li className="flex items-start gap-3 text-sm text-ink-soft">
                 <MapPinIcon className="mt-0.5 h-5 w-5 flex-shrink-0 text-pine-600" />
-                Based in {site.address.city}, {site.address.state} — serving the
+                Based in {site.address.city}, {site.address.state}, serving the
                 North Country
               </li>
               <li className="flex items-start gap-3 text-sm text-ink-soft">

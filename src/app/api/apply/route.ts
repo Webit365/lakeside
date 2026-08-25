@@ -34,12 +34,12 @@ export async function POST(req: Request) {
     );
   }
 
-  // Honeypot — bots fill hidden fields. Silently accept to waste their time.
+  // Honeypot, bots fill hidden fields. Silently accept to waste their time.
   if (data.company_website) {
     return NextResponse.json({ ok: true });
   }
 
-  // Time-trap — a real applicant takes several seconds to fill the form; bots
+  // Time-trap, a real applicant takes several seconds to fill the form; bots
   // submit near-instantly. `elapsed` is ms since the form mounted. Silently
   // accept (like the honeypot) so we don't tip off the bot.
   const elapsed = Number(data.elapsed);
@@ -65,7 +65,7 @@ export async function POST(req: Request) {
   }
 
   const positions = (data.positions || "").trim();
-  const subject = `🧑‍🔧 Job application — ${name}${
+  const subject = `🧑‍🔧 Job application, ${name}${
     positions ? ` (${positions})` : ""
   }`;
 
@@ -90,7 +90,7 @@ export async function POST(req: Request) {
     </div>`;
 
   const text =
-    `New job application — submitted via lakesidenny.com/careers\n\n` +
+    `New job application, submitted via lakesidenny.com/careers\n\n` +
     Object.entries(FIELD_LABELS)
       .filter(([k]) => data[k])
       .map(([k, label]) => `${label}: ${data[k]}`)
@@ -111,7 +111,7 @@ export async function POST(req: Request) {
     replyTo: email || undefined,
   });
 
-  // Not configured yet (no SES env vars) — log and still succeed so the form
+  // Not configured yet (no SES env vars), log and still succeed so the form
   // works in preview/staging. Configure SES in Vercel to enable delivery.
   if (result.status === "skipped") {
     console.log("[apply] Email not configured. Application received:", {

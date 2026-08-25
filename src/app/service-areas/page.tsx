@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { site, serviceAreas } from "@/lib/site";
 import { SectionHeading, CtaBand, TrustBar } from "@/components/sections";
+import { FaqSection } from "@/components/Faq";
 import { Photo } from "@/components/Photo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
-import { pageMeta, breadcrumbSchema } from "@/lib/seo";
+import { pageMeta, breadcrumbSchema, faqSchema } from "@/lib/seo";
 import { MapPinIcon, ArrowRightIcon } from "@/components/icons";
 
 export const metadata: Metadata = pageMeta({
@@ -15,14 +16,40 @@ export const metadata: Metadata = pageMeta({
   path: "/service-areas",
 });
 
+const areaFaqs = [
+  {
+    q: "Do you offer snow removal near me in Fort Drum?",
+    a: "Yes. Fort Drum and the neighboring communities of Evans Mills, Black River, and Calcium are a core part of our route. We plow and salt for rental properties, local businesses, and homeowners across the Fort Drum area, with 24/7 response through winter storms so your driveway or lot is clear when you need to get moving.",
+  },
+  {
+    q: "Which towns does Lakeside Outdoor Services plow and landscape?",
+    a: "We serve Watertown, Fort Drum, Evans Mills, Black River, Adams, Carthage, Clayton, Cape Vincent, Alexandria Bay, Wellesley Island, Sackets Harbor, Brownville, Calcium, Dexter, and the Thousand Islands. We keep the route concentrated in and around Jefferson County on purpose, because a tighter footprint means faster, more reliable service for everyone on it.",
+  },
+  {
+    q: "How fast can you reach my property during a lake-effect storm?",
+    a: "Fast, because we don't stretch our crews across three counties. During a storm our trucks run assigned priority routes continuously and cycle back as the snow keeps falling, rather than waiting for a set depth or a phone call. The difference between a plow company eight minutes away and one 40 minutes away is whether your property is open at 7am.",
+  },
+  {
+    q: "Do you provide snow plowing in the Thousand Islands, Clayton, and Alexandria Bay?",
+    a: "Yes. We cover Clayton, Cape Vincent, Alexandria Bay, and Wellesley Island. River-community properties, including seasonal homes and waterfront businesses, get the same continuous storm coverage and seasonal-contract options as the rest of our route.",
+  },
+  {
+    q: "My town isn't on your list. Can you still help?",
+    a: "If you're near Watertown, call or text Dave at (315) 777-1809 before you assume the answer is no. We sometimes take on properties just outside the core route when it fits our schedule, especially commercial sites and seasonal snow contracts.",
+  },
+];
+
 export default function ServiceAreasPage() {
   return (
     <>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Service Areas", path: "/service-areas" },
-        ])}
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Service Areas", path: "/service-areas" },
+          ]),
+          faqSchema(areaFaqs),
+        ]}
       />
 
       <section className="relative overflow-hidden bg-frost-950">
@@ -38,7 +65,7 @@ export default function ServiceAreasPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-frost-100">
             We keep a concentrated service area around Watertown and Fort Drum on
-            purpose — it&apos;s how we respond fast and reliably to every property
+            purpose, it&apos;s how we respond fast and reliably to every property
             on our route, storm after storm.
           </p>
         </div>
@@ -67,7 +94,7 @@ export default function ServiceAreasPage() {
             </ul>
             <p className="mt-6 text-ink-muted">
               Don&apos;t see your town? If you&apos;re near Watertown, give us a
-              call — we may still be able to help.
+              call, we may still be able to help.
             </p>
             <Link href="/contact" className="btn-pine btn-lg mt-6">
               Check availability for my property
@@ -82,6 +109,12 @@ export default function ServiceAreasPage() {
           />
         </div>
       </section>
+
+      <FaqSection
+        faqs={areaFaqs}
+        eyebrow="Service areas"
+        title="Snow removal & landscaping near you"
+      />
 
       <CtaBand />
     </>

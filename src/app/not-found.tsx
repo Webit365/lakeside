@@ -11,7 +11,7 @@ export default function NotFound() {
         We couldn&apos;t find that page
       </h1>
       <p className="mt-3 max-w-md text-ink-muted">
-        The page may have moved. Let&apos;s get you back on track — or just give
+        The page may have moved. Let&apos;s get you back on track, or just give
         {" "}
         {site.phone.contactName} a call.
       </p>

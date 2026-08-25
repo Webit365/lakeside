@@ -68,7 +68,7 @@ const geo = serviceAreas.map((name) => ({
   name: `${name}, NY`,
 }));
 
-/** LocalBusiness schema — the core local-SEO entity. */
+/** LocalBusiness schema, the core local-SEO entity. */
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",

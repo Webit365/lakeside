@@ -85,7 +85,7 @@ export function QuoteForm() {
           <CheckIcon className="h-7 w-7" strokeWidth={2.5} />
         </div>
         <h3 className="mt-4 font-display text-2xl font-bold text-ink">
-          Request received — thank you!
+          Request received, thank you!
         </h3>
         <p className="mx-auto mt-2 max-w-md text-ink-muted">
           {site.phone.contactName} will review your details and get back to you
@@ -132,7 +132,7 @@ export function QuoteForm() {
       <p className="mt-4 text-sm text-ink-muted">
         {mode === "commercial"
           ? "Tell us about your property and we'll prepare a commercial bid. Fields marked * are required."
-          : "Quick quote — fill this out and we'll get right back to you. Fields marked * are required."}
+          : "Quick quote, fill this out and we'll get right back to you. Fields marked * are required."}
       </p>
 
       {/* Honeypot (hidden) */}

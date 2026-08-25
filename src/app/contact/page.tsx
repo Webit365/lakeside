@@ -44,7 +44,7 @@ export default function ContactPage() {
             Get your free, no-obligation quote
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-frost-100">
-            Commercial or residential — tell us about your property and we&apos;ll
+            Commercial or residential, tell us about your property and we&apos;ll
             get you an honest quote fast. Prefer to talk? Call or Text {site.phone.contactName}{" "}
             directly.
           </p>

@@ -124,7 +124,7 @@ export function CtaBand({
 
 export async function Reviews() {
   // Live Google reviews (server-side, cached ~24h). Falls back to verified
-  // review(s) when the Featurable widget isn't configured — never placeholders.
+  // review(s) when the Featurable widget isn't configured, never placeholders.
   const live = await getGoogleReviews();
   const reviews = live?.reviews ?? FALLBACK_REVIEWS;
   const averageRating = live?.averageRating ?? site.rating.value;

@@ -63,11 +63,11 @@ const commercialFaqs = [
   },
   {
     q: "Can I bundle summer landscaping and winter snow into one contract?",
-    a: "Yes, and most commercial clients prefer it. A year-round agreement covers grounds care, mowing, and cleanups in the warm months and snow plowing, salting, and de-icing in winter — one vendor, one point of contact, seamless coverage.",
+    a: "Yes, and most commercial clients prefer it. A year-round agreement covers grounds care, mowing, and cleanups in the warm months and snow plowing, salting, and de-icing in winter. One vendor, one point of contact, seamless coverage.",
   },
   {
     q: "How do you handle snow removal for large commercial lots?",
-    a: "We map your property before winter — priority routes, snow-stacking zones, fire lanes, and drainage — then execute the same plan every storm with digitally dispatched trucks. When lots run out of room to push, we add loader relocation and off-site hauling to recover parking.",
+    a: "We map your property before winter, priority routes, snow-stacking zones, fire lanes, and drainage, then execute the same plan every storm with digitally dispatched trucks. When lots run out of room to push, we add loader relocation and off-site hauling to recover parking.",
   },
   {
     q: "Do you offer seasonal contracts with fixed pricing?",
@@ -134,7 +134,7 @@ export default function CommercialPage() {
               <p className="mt-5 max-w-xl text-lg text-frost-100">
                 Protect your property, your image, and your liability with a
                 trusted local company. We keep Watertown and Northern NY
-                businesses open, accessible, and looking their best — every
+                businesses open, accessible, and looking their best, every
                 season, documented and dependable.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -196,12 +196,12 @@ export default function CommercialPage() {
               {
                 icon: ClockIcon,
                 title: "Open before you open",
-                body: "Depth-triggered dispatch and early-morning clearing mean your lot is ready before staff and customers arrive. You never have to call.",
+                body: "Continuous storm coverage and early-morning clearing mean your lot is ready before staff and customers arrive. Our crews work through the storm on priority routes, so you never have to call.",
               },
               {
                 icon: ShieldIcon,
                 title: "Liability protection",
-                body: "Documented salting and de-icing with service logs — one of the strongest defenses against slip-and-fall claims.",
+                body: "Documented salting and de-icing with service logs, one of the strongest defenses against slip-and-fall claims.",
               },
               {
                 icon: CheckIcon,
@@ -322,7 +322,7 @@ export default function CommercialPage() {
             </h2>
             <p className="mt-2 text-frost-100">
               Tell us about your site and we&apos;ll prepare a clear commercial
-              bid — snow, landscaping, or full year-round coverage.
+              bid, snow, landscaping, or full year-round coverage.
             </p>
           </div>
           <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
@@ -343,7 +343,7 @@ export default function CommercialPage() {
       <FaqSection
         faqs={commercialFaqs}
         eyebrow="Commercial FAQ"
-        title="Commercial landscaping & snow — questions answered"
+        title="Commercial landscaping & snow: your questions answered"
       />
 
       <CtaBand

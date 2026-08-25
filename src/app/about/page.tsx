@@ -26,7 +26,7 @@ const values = [
   {
     icon: ClockIcon,
     title: "Reliability first",
-    body: "We compete on showing up — on time, every storm, every service day. That's the whole promise.",
+    body: "We compete on showing up, on time, every storm, every service day. That's the whole promise.",
   },
   {
     icon: MapPinIcon,
@@ -41,7 +41,7 @@ const values = [
   {
     icon: LeafIcon,
     title: "Quality over the low bid",
-    body: "We're for customers who value good work — the detail and care that a cheap operator can't deliver.",
+    body: "We're for customers who value good work, the detail and care that a cheap operator can't deliver.",
   },
 ];
 
@@ -81,14 +81,14 @@ export default function AboutPage() {
               {site.legalName} has been caring for properties across Watertown
               and Northern New York since {site.foundedYear}. What started as a
               dependable snow plowing operation has grown into a full-service
-              landscaping and property maintenance company — but the reason
+              landscaping and property maintenance company, but the reason
               customers stay with us hasn&apos;t changed: we&apos;re reliable.
             </p>
             <p>
               We deliberately keep a concentrated service area in and around
               Watertown and Fort Drum. That focus is our advantage. When a
               lake-effect storm buries the region, our trucks reach your property
-              fast — no delays, no excuses. And in summer, that same local
+              fast, no delays, no excuses. And in summer, that same local
               commitment means consistent, detailed grounds care from crews who
               know your property.
             </p>
@@ -132,7 +132,7 @@ export default function AboutPage() {
               sizes="(max-width: 1024px) 100vw, 900px"
             />
             <figcaption className="mt-3 text-center text-sm text-ink-muted">
-              The Lakeside crew — the people who show up for your property, every
+              The Lakeside crew, the people who show up for your property, every
               season.
             </figcaption>
           </figure>

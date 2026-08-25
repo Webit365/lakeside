@@ -45,15 +45,23 @@ export const metadata: Metadata = pageMeta({
 const homeFaqs = [
   {
     q: "What areas does Lakeside Outdoor Services cover?",
-    a: "We serve Watertown, Fort Drum, and the surrounding Northern New York communities — including Evans Mills, Black River, Adams, Carthage, Clayton, Cape Vincent, Alexandria Bay, and the Thousand Islands. We deliberately keep a concentrated service area so we can respond fast.",
+    a: "We serve Watertown, Fort Drum, and the surrounding Northern New York communities, including Evans Mills, Black River, Adams, Carthage, Clayton, Cape Vincent, Alexandria Bay, and the Thousand Islands. We deliberately keep a concentrated service area so we can respond fast.",
   },
   {
-    q: "Do you handle both commercial and residential properties?",
-    a: "Yes. We specialize in commercial landscaping and snow management for businesses, property managers, and commercial lots, and we also serve quality-focused homeowners who want dependable, professional service. No job is too big or too small.",
+    q: "How fast do you clear snow after a storm?",
+    a: "We don't wait for the snow to pile up to a set depth. During a storm our crews run assigned priority routes continuously, plowing through the event and after it ends, so commercial lots are clear before you open and driveways are clear for the morning commute. Winter snow response runs 24/7.",
+  },
+  {
+    q: "How much does snow plowing cost in Watertown, NY?",
+    a: "Pricing depends on the property: lot size, number of entrances, how much walkway and hand-work is involved, and whether you want a seasonal contract or per-storm service. Most commercial clients choose a seasonal contract for predictable budgeting. The honest answer is that we quote each property individually, and estimates are free. Call or text Dave at (315) 777-1809 for a number.",
+  },
+  {
+    q: "When should I sign a seasonal snow removal contract?",
+    a: "Before the first snow. In Northern New York the best routes fill up in the fall, so signing a seasonal contract in September or October locks in your spot and your price before lake-effect season starts. We do take on new sites mid-winter when we have route capacity, but early is safer.",
   },
   {
     q: "Can I use one company for both landscaping and snow removal?",
-    a: "Absolutely — most of our clients do. Using one trusted local company for summer grounds care and winter snow management means seamless year-round coverage, a single point of contact, and no gaps in service.",
+    a: "Yes, and most of our clients do. Using one trusted local company for summer grounds care and winter snow management means seamless year-round coverage, a single point of contact, and no gaps in service between seasons.",
   },
   {
     q: "Are you licensed and insured?",
@@ -74,17 +82,17 @@ const differentiators = [
   {
     icon: MapPinIcon,
     title: "Fast local response",
-    body: "A concentrated route around Watertown & Fort Drum means we reach your property quickly — even in a heavy lake-effect event.",
+    body: "A concentrated route around Watertown & Fort Drum means we reach your property quickly, even in a heavy lake-effect event.",
   },
   {
     icon: ClockIcon,
     title: "On time, every time",
-    body: "Digitally dispatched, depth-triggered service. Lots and driveways cleared before you open — you never have to call.",
+    body: "Around-the-clock storm coverage. Our crews run priority routes continuously through the storm, so lots and driveways are clear before you open. You never have to call.",
   },
   {
     icon: ShieldIcon,
     title: "Fully insured & documented",
-    body: "COI on file, service logs for every commercial visit — the paper trail your risk manager and GL carrier want.",
+    body: "COI on file, service logs for every commercial visit, the paper trail your risk manager and GL carrier want.",
   },
   {
     icon: TruckIcon,
@@ -94,7 +102,7 @@ const differentiators = [
   {
     icon: StarIcon,
     title: "15+ years, trusted local",
-    body: "Serving Northern NY since 2010 with a reputation built on reliability — not the lowest bid.",
+    body: "Serving Northern NY since 2010 with a reputation built on reliability, not the lowest bid.",
   },
   {
     icon: CheckIcon,
@@ -195,7 +203,7 @@ export default function HomePage() {
             </ul>
           </div>
 
-          {/* Hero visual — the Lakeside crew, with floating rating */}
+          {/* Hero visual, the Lakeside crew, with floating rating */}
           <div className="relative animate-fade-up [animation-delay:120ms]">
             <Photo
               src="/photos/crew-team.jpg"
@@ -251,7 +259,7 @@ export default function HomePage() {
               </h2>
               <p className="mt-2 max-w-xl text-frost-100">
                 Loader operators, small equipment operators &amp; shovelers
-                wanted. Great pay, steady work — help keep Watertown moving this
+                wanted. Great pay, steady work, help keep Watertown moving this
                 winter.
               </p>
             </div>
@@ -282,7 +290,7 @@ export default function HomePage() {
           />
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            {/* Commercial — emphasized */}
+            {/* Commercial, emphasized */}
             <div className="group relative overflow-hidden rounded-2xl bg-frost-900 p-8 text-white shadow-lift sm:p-10">
               <div
                 aria-hidden="true"
@@ -348,7 +356,7 @@ export default function HomePage() {
                 Residential Landscaping &amp; Snow
               </h3>
               <p className="mt-3 text-ink-muted">
-                For homeowners who want it done right — not just done. Reliable
+                For homeowners who want it done right, not just done. Reliable
                 mowing and detailed lawn care, custom landscaping, and
                 dependable driveway plowing from a crew that respects your
                 property.
@@ -438,7 +446,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Year-round partner"
               title="One trusted local company for every season"
-              intro="Stop juggling contractors. We keep your property sharp in summer and safe in winter — with a single point of contact and no gaps in coverage."
+              intro="Stop juggling contractors. We keep your property sharp in summer and safe in winter, with a single point of contact and no gaps in coverage."
             />
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-pine-100 bg-frost-50/50 p-5">
@@ -562,11 +570,11 @@ export default function HomePage() {
               {
                 step: "2",
                 title: "Get a clear, honest quote",
-                body: "We assess your site and give you a straightforward quote — seasonal or per-service, no surprises.",
+                body: "We assess your site and give you a straightforward quote, seasonal or per-service, no surprises.",
               },
               {
                 step: "3",
-                title: "Sit back — it's handled",
+                title: "Sit back, it's handled",
                 body: "Our crews show up on schedule and keep your property sharp and safe, season after season.",
               },
             ].map((p) => (
@@ -681,7 +689,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Where we work"
               title="Proudly serving Watertown & the North Country"
-              intro="We keep a concentrated service area on purpose — it's how we respond fast and clear your property before the competition even arrives."
+              intro="We keep a concentrated service area on purpose, it's how we respond fast and clear your property before the competition even arrives."
             />
             <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3">
               {serviceAreas.map((area) => (

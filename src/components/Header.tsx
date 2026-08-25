@@ -244,7 +244,7 @@ export function Header() {
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gold-400 px-4 py-3 text-base font-bold text-ink transition-colors hover:bg-gold-300"
               >
                 <span className="flex h-2.5 w-2.5 rounded-full bg-pine-700" />
-                We&apos;re Hiring — Apply Now
+                We&apos;re Hiring, Apply Now
               </Link>
               <Link href="/contact" className="btn-primary btn-lg w-full">
                 Get My Free Quote

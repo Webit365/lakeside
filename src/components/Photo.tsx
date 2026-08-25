@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 /**
- * Real photo tile — next/image (auto AVIF/WebP + responsive sizing) inside an
+ * Real photo tile, next/image (auto AVIF/WebP + responsive sizing) inside an
  * aspect-ratio box. Drop-in replacement for <PhotoSlot> where we have a real
  * image. Add `overlay` when text/UI sits on top of the photo.
  */

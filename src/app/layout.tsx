@@ -3,7 +3,7 @@ import { Inter, Bricolage_Grotesque } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-// GA4 Measurement ID (public — exposed client-side by design).
+// GA4 Measurement ID (public, exposed client-side by design).
 const GA_MEASUREMENT_ID = "G-7K45BWTGDQ";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";

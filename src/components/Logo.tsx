@@ -22,7 +22,7 @@ export function Logo({
   return (
     <Link
       href="/"
-      aria-label={`${site.legalName} — home`}
+      aria-label={`${site.legalName}, home`}
       className={`inline-flex items-center ${className}`}
     >
       <span
