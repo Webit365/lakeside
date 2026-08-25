@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/service-areas", priority: 0.7, freq: "monthly" },
     { path: "/about", priority: 0.6, freq: "monthly" },
     { path: "/contact", priority: 0.8, freq: "monthly" },
+    { path: "/careers", priority: 0.7, freq: "weekly" },
   ];
 
   const servicePaths = serviceSlugs.map((slug) => ({

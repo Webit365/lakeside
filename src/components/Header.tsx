@@ -104,6 +104,15 @@ export function Header() {
                     </div>
                   </div>
                 </div>
+              ) : item.href === "/careers" ? (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="ml-1 inline-flex items-center gap-1.5 rounded-lg bg-gold-400 px-3 py-2 text-[0.95rem] font-bold text-ink transition-colors hover:bg-gold-300"
+                >
+                  <span className="flex h-2 w-2 rounded-full bg-pine-700" />
+                  {item.label}
+                </Link>
               ) : (
                 <Link
                   key={item.label}
@@ -216,6 +225,14 @@ export function Header() {
                       </div>
                     )}
                   </>
+                ) : item.href === "/careers" ? (
+                  <Link
+                    href={item.href}
+                    className="flex items-center gap-2 py-3 text-base font-bold text-pine-800"
+                  >
+                    <span className="flex h-2.5 w-2.5 rounded-full bg-gold-400" />
+                    {item.label}
+                  </Link>
                 ) : (
                   <Link
                     href={item.href}

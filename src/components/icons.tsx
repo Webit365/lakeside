@@ -160,6 +160,47 @@ export function SoilIcon(props: IconProps) {
   );
 }
 
+export function HardHatIcon(props: IconProps) {
+  return (
+    <svg {...base} aria-hidden="true" {...props}>
+      <path d="M3 17a9 9 0 0 1 18 0" />
+      <path d="M2 17h20v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2Z" />
+      <path d="M10 8.5V5.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3M8 9V7M16 9V7" />
+    </svg>
+  );
+}
+
+export function DollarIcon(props: IconProps) {
+  return (
+    <svg {...base} aria-hidden="true" {...props}>
+      <path d="M12 2.5v19" />
+      <path d="M16.5 6.5c-1-1.3-2.7-2-4.5-2-2.5 0-4.5 1.3-4.5 3.3 0 4.7 9 2 9 6.7 0 2-2 3.5-4.5 3.5-1.9 0-3.6-.8-4.5-2" />
+    </svg>
+  );
+}
+
+export function UsersIcon(props: IconProps) {
+  return (
+    <svg {...base} aria-hidden="true" {...props}>
+      <circle cx="9" cy="8" r="3.2" />
+      <path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" />
+      <path d="M16 5.2A3.2 3.2 0 0 1 16 11.4M17.5 14.8c2 .8 3.5 2.6 3.5 5.2" />
+    </svg>
+  );
+}
+
+export function WheelLoaderIcon(props: IconProps) {
+  return (
+    <svg {...base} aria-hidden="true" {...props}>
+      <path d="M2 15l3-3v-2h4l2 4h6v3H4" />
+      <path d="M2 15v-3l3 .0" />
+      <path d="M17 17h4v-3l-2-1" />
+      <circle cx="7" cy="18" r="2" />
+      <circle cx="17.5" cy="18" r="2" />
+    </svg>
+  );
+}
+
 export const serviceIcons = {
   "commercial-snow-plowing": TruckIcon,
   "snow-plowing": SnowIcon,

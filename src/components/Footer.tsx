@@ -53,6 +53,13 @@ export function Footer() {
               Locally Owned
             </span>
           </div>
+          <Link
+            href="/careers"
+            className="mt-5 inline-flex items-center gap-2 rounded-xl bg-gold-400 px-4 py-2 text-sm font-bold text-ink transition-colors hover:bg-gold-300"
+          >
+            <span className="flex h-2 w-2 rounded-full bg-pine-800" />
+            We&apos;re Hiring — Apply Now
+          </Link>
         </div>
 
         <div>

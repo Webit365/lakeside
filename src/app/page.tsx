@@ -226,6 +226,50 @@ export default function HomePage() {
 
       <TrustBar />
 
+      {/* ===== NOW HIRING PROMO ===== */}
+      <section className="relative overflow-hidden bg-frost-900">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-[0.18]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 15% 20%, #93cdfd 0, transparent 40%), radial-gradient(circle at 85% 80%, #f9bd24 0, transparent 45%)",
+          }}
+        />
+        <div className="container-x relative flex flex-col items-start gap-6 py-10 md:flex-row md:items-center md:justify-between md:py-8">
+          <div className="flex items-start gap-4">
+            <span className="hidden h-14 w-14 flex-shrink-0 place-items-center rounded-2xl bg-gold-400 text-ink sm:grid">
+              <SnowIcon className="h-8 w-8" />
+            </span>
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-gold-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-ink">
+                <span className="flex h-2 w-2 rounded-full bg-frost-900" />
+                Now Hiring
+              </div>
+              <h2 className="mt-3 font-display text-2xl font-bold text-white sm:text-3xl">
+                Join our team for winter snow removal
+              </h2>
+              <p className="mt-2 max-w-xl text-frost-100">
+                Loader operators, small equipment operators &amp; shovelers
+                wanted. Great pay, steady work — help keep Watertown moving this
+                winter.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
+            <Link href="/careers" className="btn-primary btn-lg">
+              Apply Today
+              <ArrowRightIcon className="h-5 w-5" />
+            </Link>
+            <PhoneLink
+              className="btn-ghost-light btn-lg"
+              iconClassName="h-5 w-5"
+              label={site.phone.display}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ===== TWO PATHS: Commercial (emphasis) + Residential ===== */}
       <section className="py-16 sm:py-20">
         <div className="container-x">
