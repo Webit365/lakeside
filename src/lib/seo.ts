@@ -72,7 +72,10 @@ const geo = serviceAreas.map((name) => ({
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "LandscapingBusiness",
+    // "LandscapingBusiness" is NOT a real schema.org type -> Google rejected the
+    // aggregateRating with "Invalid object type for field <parent_node>". Use a
+    // valid LocalBusiness subtype (supported for local-business + review snippets).
+    "@type": "HomeAndConstructionBusiness",
     "@id": `${baseUrl}/#business`,
     name: site.legalName,
     alternateName: site.shortBrand,
